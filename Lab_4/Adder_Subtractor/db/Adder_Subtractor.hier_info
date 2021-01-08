@@ -1,0 +1,165 @@
+|Adder_Subtractor
+R0 <= Circuit_3:inst.S0
+A0 => Circuit_3:inst.A0
+Vcc => 7486:inst2.Vcc
+Add/Sub => 7486:inst2.A0
+Add/Sub => 7486:inst2.A1
+Add/Sub => 7486:inst2.A2
+Add/Sub => 7486:inst2.A3
+Add/Sub => Circuit_3:inst.Cin
+B0 => 7486:inst2.B0
+B1 => 7486:inst2.B1
+B2 => 7486:inst2.B2
+B3 => 7486:inst2.B3
+GND => 7486:inst2.GND
+A1 => Circuit_3:inst.A1
+A2 => Circuit_3:inst.A2
+A3 => Circuit_3:inst.A3
+R1 <= Circuit_3:inst.S1
+R2 <= Circuit_3:inst.S2
+R3 <= Circuit_3:inst.S3
+Cout <= Circuit_3:inst.Cout
+
+
+|Adder_Subtractor|Circuit_3:inst
+GND_R <= GND.DB_MAX_OUTPUT_PORT_TYPE
+GND => GND_R.DATAIN
+GND => 7400:inst2.GND
+GND => 7486:inst.GND
+GND => 7400:inst3.GND
+GND => 7400:inst5.GND
+GND => 7486:inst4.GND
+Vcc_R <= Vcc.DB_MAX_OUTPUT_PORT_TYPE
+Vcc => Vcc_R.DATAIN
+Vcc => 7486:inst.Vcc
+Vcc => 7400:inst2.Vcc
+Vcc => 7486:inst4.Vcc
+Vcc => 7400:inst5.Vcc
+Vcc => 7400:inst3.Vcc
+S0 <= 7486:inst.O3
+A1 => 7486:inst.A0
+A1 => 7400:inst2.B1
+B1 => 7486:inst.B0
+B1 => 7400:inst2.A1
+B0 => 7400:inst2.A2
+B0 => 7486:inst.A2
+A0 => 7400:inst2.B2
+A0 => 7486:inst.B2
+Cin => 7400:inst2.B3
+Cin => 7486:inst.B3
+S1 <= 7486:inst.O1
+S2 <= 7486:inst4.O3
+A3 => 7486:inst4.A0
+A3 => 7400:inst5.B0
+B3 => 7486:inst4.B0
+B3 => 7400:inst5.A0
+B2 => 7400:inst3.A2
+B2 => 7486:inst4.A2
+A2 => 7400:inst3.B2
+A2 => 7486:inst4.B2
+S3 <= 7486:inst4.O1
+Cout <= 7400:inst5.O3
+
+
+|Adder_Subtractor|Circuit_3:inst|7486:inst
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A0 => inst.IN0
+B0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst1.IN0
+B1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst2.IN0
+B2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst3.IN0
+B3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+
+|Adder_Subtractor|Circuit_3:inst|7400:inst2
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B0 => inst.IN0
+A0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B1 => inst1.IN0
+A1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B2 => inst2.IN0
+A2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+B3 => inst3.IN0
+A3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+
+|Adder_Subtractor|Circuit_3:inst|7486:inst4
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A0 => inst.IN0
+B0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst1.IN0
+B1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst2.IN0
+B2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst3.IN0
+B3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+
+|Adder_Subtractor|Circuit_3:inst|7400:inst5
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B0 => inst.IN0
+A0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B1 => inst1.IN0
+A1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B2 => inst2.IN0
+A2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+B3 => inst3.IN0
+A3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+
+|Adder_Subtractor|Circuit_3:inst|7400:inst3
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B0 => inst.IN0
+A0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B1 => inst1.IN0
+A1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B2 => inst2.IN0
+A2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+B3 => inst3.IN0
+A3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+
+|Adder_Subtractor|7486:inst2
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A0 => inst.IN0
+B0 => inst.IN1
+O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst1.IN0
+B1 => inst1.IN1
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst2.IN0
+B2 => inst2.IN1
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst3.IN0
+B3 => inst3.IN1
+Vcc => ~NO_FANOUT~
+GND => ~NO_FANOUT~
+
+

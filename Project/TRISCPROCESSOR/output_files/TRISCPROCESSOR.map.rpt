@@ -1,0 +1,887 @@
+Analysis & Synthesis report for TRISCPROCESSOR
+Thu Dec 03 23:10:25 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |TRISCPROCESSOR|CU:inst7|FSM:inst1|state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated
+ 16. Parameter Settings for User Entity Instance: CU:inst7|FSM:inst1
+ 17. Parameter Settings for User Entity Instance: CU:inst7|ID:inst
+ 18. Parameter Settings for User Entity Instance: TRISCALU:inst4|ALU:inst|BUSMUX:inst3
+ 19. Parameter Settings for User Entity Instance: TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: TRISCRAM:inst|BUSMUX:inst2
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 23:10:25 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; TRISCPROCESSOR                                  ;
+; Top-level Entity Name              ; TRISCPROCESSOR                                  ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 198                                             ;
+;     Total combinational functions  ; 194                                             ;
+;     Dedicated logic registers      ; 43                                              ;
+; Total registers                    ; 43                                              ;
+; Total pins                         ; 66                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 128                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20AF484A7      ;                    ;
+; Top-level entity name                                                      ; TRISCPROCESSOR     ; TRISCPROCESSOR     ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++-------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                           ; Library ;
++-------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; ../TRISCHEX/TRISCHEX.v                          ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCHEX/TRISCHEX.v                   ;         ;
+; ../../Lab_7/AND_XOR/AND_XOR.v                   ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_7/AND_XOR/AND_XOR.v                       ;         ;
+; ../../Lab_7/Adder_Subtractor/Adder_Subtractor.v ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_7/Adder_Subtractor/Adder_Subtractor.v     ;         ;
+; ../../Lab_7/ALU/ALU.bdf                         ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_7/ALU/ALU.bdf                             ;         ;
+; ../../Lab_10/IR/IR.bdf                          ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_10/IR/IR.bdf                              ;         ;
+; ../../Lab_10/ACC/ACC.bdf                        ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_10/ACC/ACC.bdf                            ;         ;
+; ../../Lab_12/ID/ID.v                            ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/ID/ID.v                                ;         ;
+; ../../Lab_12/FSM/FSM.v                          ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/FSM/FSM.v                              ;         ;
+; ../TRISCFLAG/TRISCFLAG.bdf                      ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCFLAG/TRISCFLAG.bdf               ;         ;
+; ../TRISCALU/TRISCALU.bdf                        ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCALU/TRISCALU.bdf                 ;         ;
+; ../../Lab_12/CU/CU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/CU/CU.bdf                              ;         ;
+; ../../Lab_10/PC/PC.bdf                          ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_10/PC/PC.bdf                              ;         ;
+; ../TRISCRAMfall2020/TRISCRAMfall2020.v          ; yes             ; User Wizard-Generated File         ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020.v   ;         ;
+; ../TRISCRAM/TRISCRAM.bdf                        ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAM/TRISCRAM.bdf                 ;         ;
+; TRISCPROCESSOR.bdf                              ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCPROCESSOR/TRISCPROCESSOR.bdf     ;         ;
+; 74193.bdf                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74193.bdf                                                          ;         ;
+; 74175.bdf                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74175.bdf                                                          ;         ;
+; busmux.tdf                                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/busmux.tdf                                                           ;         ;
+; lpm_mux.inc                                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                          ;         ;
+; lpm_mux.tdf                                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                          ;         ;
+; aglobal130.inc                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                       ;         ;
+; muxlut.inc                                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                           ;         ;
+; bypassff.inc                                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                         ;         ;
+; altshift.inc                                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                         ;         ;
+; db/mux_omc.tdf                                  ; yes             ; Auto-Generated Megafunction        ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCPROCESSOR/db/mux_omc.tdf         ;         ;
+; 74157.bdf                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74157.bdf                                                          ;         ;
+; altsyncram.tdf                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                       ;         ;
+; stratix_ram_block.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                ;         ;
+; lpm_decode.inc                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                       ;         ;
+; a_rdenreg.inc                                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                        ;         ;
+; altrom.inc                                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                           ;         ;
+; altram.inc                                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                           ;         ;
+; altdpram.inc                                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                         ;         ;
+; db/altsyncram_7vc1.tdf                          ; yes             ; Auto-Generated Megafunction        ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCPROCESSOR/db/altsyncram_7vc1.tdf ;         ;
++-------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 198   ;
+;                                             ;       ;
+; Total combinational functions               ; 194   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 76    ;
+;     -- 3 input functions                    ; 76    ;
+;     -- <=2 input functions                  ; 42    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 194   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 43    ;
+;     -- Dedicated logic registers            ; 43    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 66    ;
+; Total memory bits                           ; 128   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 27    ;
+; Total fan-out                               ; 848   ;
+; Average fan-out                             ; 2.73  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+; |TRISCPROCESSOR                              ; 194 (1)           ; 43 (0)       ; 128         ; 0            ; 0       ; 0         ; 66   ; 0            ; |TRISCPROCESSOR                                                                                                    ; work         ;
+;    |ACC:inst3|                               ; 31 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|ACC:inst3                                                                                          ; work         ;
+;       |74193:inst|                           ; 31 (31)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|ACC:inst3|74193:inst                                                                               ; work         ;
+;    |CU:inst7|                                ; 91 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|CU:inst7                                                                                           ; work         ;
+;       |FSM:inst1|                            ; 81 (81)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|CU:inst7|FSM:inst1                                                                                 ; work         ;
+;       |ID:inst|                              ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|CU:inst7|ID:inst                                                                                   ; work         ;
+;    |IR:inst6|                                ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|IR:inst6                                                                                           ; work         ;
+;       |74175:inst|                           ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|IR:inst6|74175:inst                                                                                ; work         ;
+;    |PC:inst2|                                ; 27 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|PC:inst2                                                                                           ; work         ;
+;       |74193:inst|                           ; 27 (27)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|PC:inst2|74193:inst                                                                                ; work         ;
+;    |TRISCALU:inst4|                          ; 11 (1)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4                                                                                     ; work         ;
+;       |74175:inst2|                          ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|74175:inst2                                                                         ; work         ;
+;       |ALU:inst|                             ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst                                                                            ; work         ;
+;          |Adder_Subtractor:inst1|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|Adder_Subtractor:inst1                                                     ; work         ;
+;             |full_adder:fa0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|Adder_Subtractor:inst1|full_adder:fa0                                      ; work         ;
+;             |full_adder:fa1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|Adder_Subtractor:inst1|full_adder:fa1                                      ; work         ;
+;          |busmux:inst3|                      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|busmux:inst3                                                               ; work         ;
+;             |lpm_mux:$00000|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|busmux:inst3|lpm_mux:$00000                                                ; work         ;
+;                |mux_omc:auto_generated|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|busmux:inst3|lpm_mux:$00000|mux_omc:auto_generated                         ; work         ;
+;    |TRISCFLAG:inst5|                         ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCFLAG:inst5                                                                                    ; work         ;
+;       |74175:inst|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCFLAG:inst5|74175:inst                                                                         ; work         ;
+;    |TRISCHEX:inst10|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCHEX:inst10                                                                                    ; work         ;
+;    |TRISCHEX:inst11|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCHEX:inst11                                                                                    ; work         ;
+;    |TRISCHEX:inst8|                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCHEX:inst8                                                                                     ; work         ;
+;    |TRISCHEX:inst9|                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCHEX:inst9                                                                                     ; work         ;
+;    |TRISCRAM:inst|                           ; 5 (1)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst                                                                                      ; work         ;
+;       |TRISCRAMfall2020:inst|                ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|TRISCRAMfall2020:inst                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_7vc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated ; work         ;
+;       |busmux:inst2|                         ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|busmux:inst2                                                                         ; work         ;
+;          |lpm_mux:$00000|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|busmux:inst2|lpm_mux:$00000                                                          ; work         ;
+;             |mux_omc:auto_generated|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TRISCPROCESSOR|TRISCRAM:inst|busmux:inst2|lpm_mux:$00000|mux_omc:auto_generated                                   ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                             ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------+
+; Name                                                                                                          ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                  ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------+
+; TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 16           ; 8            ; --           ; --           ; 128  ; TRISCRAMfall2020.mif ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                     ; IP Include File                                                                                                      ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |TRISCPROCESSOR|TRISCRAM:inst|TRISCRAMfall2020:inst ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TRISCPROCESSOR|CU:inst7|FSM:inst1|state                                                                                                                                                                                                                                                                                                              ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+; Name         ; state.JPN1 ; state.JPZ1 ; state.JMP1 ; state.CLR1 ; state.INC1 ; state.XOR4 ; state.XOR3 ; state.XOR2 ; state.XOR1 ; state.SUB4 ; state.SUB3 ; state.SUB2 ; state.SUB1 ; state.ADD4 ; state.ADD3 ; state.ADD2 ; state.ADD1 ; state.STA2 ; state.STA1 ; state.LDA3 ; state.LDA2 ; state.LDA1 ; state.DECODE ; state.FETCH2 ; state.FETCH1 ; state.START ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+; state.START  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 0           ;
+; state.FETCH1 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 1            ; 1           ;
+; state.FETCH2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ; 0            ; 1           ;
+; state.DECODE ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1            ; 0            ; 0            ; 1           ;
+; state.LDA1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0            ; 0            ; 0            ; 1           ;
+; state.LDA2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.LDA3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.STA1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.STA2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.INC1   ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.CLR1   ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JMP1   ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JPZ1   ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JPN1   ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; CU:inst7|FSM:inst1|CONTROL[15]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[14]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[13]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[12]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[11]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[10]                      ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[9]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[8]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[7]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[5]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[4]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[3]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[2]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[1]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|CONTROL[0]                       ; CU:inst7|FSM:inst1|CONTROL         ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.ADD3_1035              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.SUB3_922               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.XOR3_809               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.JPZ1_670               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.JPN1_644               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.SUB1_977               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.SUB2_951               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.XOR1_864               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.XOR2_838               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.LDA3_1174              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.ADD4_1006              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.SUB4_893               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.XOR4_780               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.LDA2_1203              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.INC1_751               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.CLR1_725               ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.DECODE_1258            ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.STA1_1145              ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.STA2_1119              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.FETCH1_1316            ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.FETCH2_1287            ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.LDA1_1229              ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.ADD1_1090              ; GND                                ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.ADD2_1064              ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.JMP1_699               ; CU:inst7|FSM:inst1|nextstate.START ; yes                    ;
+; CU:inst7|FSM:inst1|nextstate.START_1342             ; GND                                ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++---------------------------------------+-------------------------------------------+
+; Register name                         ; Reason for Removal                        ;
++---------------------------------------+-------------------------------------------+
+; CU:inst7|FSM:inst1|state~4            ; Lost fanout                               ;
+; CU:inst7|FSM:inst1|state~5            ; Lost fanout                               ;
+; CU:inst7|FSM:inst1|state~6            ; Lost fanout                               ;
+; CU:inst7|FSM:inst1|state~7            ; Lost fanout                               ;
+; CU:inst7|FSM:inst1|state~8            ; Lost fanout                               ;
+; CU:inst7|FSM:inst1|state~9            ; Lost fanout                               ;
+; TRISCFLAG:inst5|74175:inst|15         ; Merged with TRISCALU:inst4|74175:inst2|13 ;
+; Total Number of Removed Registers = 7 ;                                           ;
++---------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TRISCPROCESSOR|TRISCALU:inst4|ALU:inst|busmux:inst3|lpm_mux:$00000|mux_omc:auto_generated|result_node[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                          ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                           ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CU:inst7|FSM:inst1 ;
++----------------+--------+---------------------------------------+
+; Parameter Name ; Value  ; Type                                  ;
++----------------+--------+---------------------------------------+
+; START          ; 000000 ; Unsigned Binary                       ;
+; FETCH1         ; 000001 ; Unsigned Binary                       ;
+; FETCH2         ; 000010 ; Unsigned Binary                       ;
+; DECODE         ; 000011 ; Unsigned Binary                       ;
+; LDA1           ; 000100 ; Unsigned Binary                       ;
+; LDA2           ; 000101 ; Unsigned Binary                       ;
+; LDA3           ; 000110 ; Unsigned Binary                       ;
+; STA1           ; 001000 ; Unsigned Binary                       ;
+; STA2           ; 001001 ; Unsigned Binary                       ;
+; ADD1           ; 001100 ; Unsigned Binary                       ;
+; ADD2           ; 001101 ; Unsigned Binary                       ;
+; ADD3           ; 001110 ; Unsigned Binary                       ;
+; ADD4           ; 001111 ; Unsigned Binary                       ;
+; SUB1           ; 010000 ; Unsigned Binary                       ;
+; SUB2           ; 010001 ; Unsigned Binary                       ;
+; SUB3           ; 010010 ; Unsigned Binary                       ;
+; SUB4           ; 010011 ; Unsigned Binary                       ;
+; XOR1           ; 010100 ; Unsigned Binary                       ;
+; XOR2           ; 010101 ; Unsigned Binary                       ;
+; XOR3           ; 010110 ; Unsigned Binary                       ;
+; XOR4           ; 010111 ; Unsigned Binary                       ;
+; INC1           ; 011000 ; Unsigned Binary                       ;
+; CLR1           ; 011100 ; Unsigned Binary                       ;
+; JMP1           ; 100000 ; Unsigned Binary                       ;
+; JPZ1           ; 100100 ; Unsigned Binary                       ;
+; JPN1           ; 101000 ; Unsigned Binary                       ;
+; C0             ; 1      ; Signed Integer                        ;
+; C1             ; 2      ; Signed Integer                        ;
+; C2             ; 4      ; Signed Integer                        ;
+; C3             ; 8      ; Signed Integer                        ;
+; C4             ; 16     ; Signed Integer                        ;
+; C5             ; 32     ; Signed Integer                        ;
+; C6             ; 64     ; Signed Integer                        ;
+; C7             ; 128    ; Signed Integer                        ;
+; C8             ; 256    ; Signed Integer                        ;
+; C9             ; 512    ; Signed Integer                        ;
+; C10            ; 1024   ; Signed Integer                        ;
+; C11            ; 2048   ; Signed Integer                        ;
+; C12            ; 4096   ; Signed Integer                        ;
+; C13            ; 8192   ; Signed Integer                        ;
+; C14            ; 16384  ; Signed Integer                        ;
+; C15            ; 32768  ; Signed Integer                        ;
+; LDA            ; 1      ; Signed Integer                        ;
+; STA            ; 2      ; Signed Integer                        ;
+; ADD            ; 4      ; Signed Integer                        ;
+; SUB            ; 8      ; Signed Integer                        ;
+; XOR            ; 16     ; Signed Integer                        ;
+; INC            ; 32     ; Signed Integer                        ;
+; CLR            ; 64     ; Signed Integer                        ;
+; JMP            ; 128    ; Signed Integer                        ;
+; JPZ            ; 256    ; Signed Integer                        ;
+; JPN            ; 512    ; Signed Integer                        ;
+; HLT            ; 1024   ; Signed Integer                        ;
++----------------+--------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CU:inst7|ID:inst ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; LDA            ; 0000  ; Unsigned Binary                      ;
+; STA            ; 0001  ; Unsigned Binary                      ;
+; ADD            ; 0010  ; Unsigned Binary                      ;
+; SUB            ; 0011  ; Unsigned Binary                      ;
+; XOR            ; 0100  ; Unsigned Binary                      ;
+; INC            ; 0110  ; Unsigned Binary                      ;
+; CLR            ; 0111  ; Unsigned Binary                      ;
+; JMP            ; 1000  ; Unsigned Binary                      ;
+; JPZ            ; 1100  ; Unsigned Binary                      ;
+; JPN            ; 1001  ; Unsigned Binary                      ;
+; HLT            ; 1111  ; Unsigned Binary                      ;
+; _LDA           ; 1     ; Signed Integer                       ;
+; _STA           ; 2     ; Signed Integer                       ;
+; _ADD           ; 4     ; Signed Integer                       ;
+; _SUB           ; 8     ; Signed Integer                       ;
+; _XOR           ; 16    ; Signed Integer                       ;
+; _INC           ; 32    ; Signed Integer                       ;
+; _CLR           ; 64    ; Signed Integer                       ;
+; _JMP           ; 128   ; Signed Integer                       ;
+; _JPZ           ; 256   ; Signed Integer                       ;
+; _JPN           ; 512   ; Signed Integer                       ;
+; _HLT           ; 1024  ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TRISCALU:inst4|ALU:inst|BUSMUX:inst3 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                                  ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                 ;
++------------------------------------+----------------------+------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                              ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                              ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                       ;
+; WIDTHAD_A                          ; 4                    ; Signed Integer                                       ;
+; NUMWORDS_A                         ; 16                   ; Signed Integer                                       ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; WIDTH_B                            ; 1                    ; Untyped                                              ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                              ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                              ;
+; INIT_FILE                          ; TRISCRAMfall2020.mif ; Untyped                                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                              ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                              ;
+; CBXI_PARAMETER                     ; altsyncram_7vc1      ; Untyped                                              ;
++------------------------------------+----------------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TRISCRAM:inst|BUSMUX:inst2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                        ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                ;
++-------------------------------------------+---------------------------------------------------------------------+
+; Name                                      ; Value                                                               ;
++-------------------------------------------+---------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                   ;
+; Entity Instance                           ; TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                         ;
+;     -- WIDTH_A                            ; 8                                                                   ;
+;     -- NUMWORDS_A                         ; 16                                                                  ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                              ;
+;     -- WIDTH_B                            ; 1                                                                   ;
+;     -- NUMWORDS_B                         ; 1                                                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                           ;
++-------------------------------------------+---------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Dec 03 23:10:10 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TRISCPROCESSOR -c TRISCPROCESSOR
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/project/trischex/trischex.v
+    Info (12023): Found entity 1: TRISCHEX
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_7/and_xor/and_xor.v
+    Info (12023): Found entity 1: AND_XOR
+Info (12021): Found 2 design units, including 2 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_7/adder_subtractor/adder_subtractor.v
+    Info (12023): Found entity 1: Adder_Subtractor
+    Info (12023): Found entity 2: full_adder
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_7/alu/alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_10/ir/ir.bdf
+    Info (12023): Found entity 1: IR
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_10/acc/acc.bdf
+    Info (12023): Found entity 1: ACC
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_12/id/id.v
+    Info (12023): Found entity 1: ID
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_12/fsm/fsm.v
+    Info (12023): Found entity 1: FSM
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/project/triscflag/triscflag.bdf
+    Info (12023): Found entity 1: TRISCFLAG
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/project/triscalu/triscalu.bdf
+    Info (12023): Found entity 1: TRISCALU
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_12/cu/cu.bdf
+    Info (12023): Found entity 1: CU
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_10/pc/pc.bdf
+    Info (12023): Found entity 1: PC
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/project/triscramfall2020/triscramfall2020.v
+    Info (12023): Found entity 1: TRISCRAMfall2020
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/project/triscram/triscram.bdf
+    Info (12023): Found entity 1: TRISCRAM
+Info (12021): Found 1 design units, including 1 entities, in source file triscprocessor.bdf
+    Info (12023): Found entity 1: TRISCPROCESSOR
+Info (12127): Elaborating entity "TRISCPROCESSOR" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[15..0]" to "C15..0"
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[12]" to "C12"
+    Warning (275081): Converted element name(s) from "C[13]" to "C13"
+    Warning (275081): Converted element name(s) from "C[14]" to "C14"
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[15]" to "C15"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:inst2"
+Info (12128): Elaborating entity "74193" for hierarchy "PC:inst2|74193:inst"
+Info (12130): Elaborated megafunction instantiation "PC:inst2|74193:inst"
+Info (12128): Elaborating entity "CU" for hierarchy "CU:inst7"
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[15..0]" to "C15..0"
+Info (12128): Elaborating entity "FSM" for hierarchy "CU:inst7|FSM:inst1"
+Warning (10230): Verilog HDL assignment warning at FSM.v(29): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(31): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(32): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(34): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(35): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(36): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(37): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(38): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(39): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(40): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(41): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(42): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(43): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(44): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(45): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at FSM.v(48): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(49): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(50): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(52): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(53): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(55): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(56): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(57): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(58): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(60): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(61): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(63): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(65): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(66): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(67): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(68): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(70): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(72): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(74): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(76): variable "Z" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(78): variable "N" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(26): inferring latch(es) for variable "CONTROL", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(26): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "nextstate.JPN1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.JPZ1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.JMP1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.CLR1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.INC1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.STA2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.STA1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.DECODE" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.FETCH2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.FETCH1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.START" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[0]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[1]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[2]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[3]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[4]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[5]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[6]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[7]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[8]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[9]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[10]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[11]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[12]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[13]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[14]" at FSM.v(26)
+Info (10041): Inferred latch for "CONTROL[15]" at FSM.v(26)
+Info (12128): Elaborating entity "ID" for hierarchy "CU:inst7|ID:inst"
+Warning (10230): Verilog HDL assignment warning at ID.v(11): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(12): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(13): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(14): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(15): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(16): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(17): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(18): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(19): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(20): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(21): truncated value with size 32 to match size of target (11)
+Info (12128): Elaborating entity "TRISCFLAG" for hierarchy "TRISCFLAG:inst5"
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[15]" to "C15"
+Info (12128): Elaborating entity "74175" for hierarchy "TRISCFLAG:inst5|74175:inst"
+Info (12130): Elaborated megafunction instantiation "TRISCFLAG:inst5|74175:inst"
+Info (12128): Elaborating entity "TRISCALU" for hierarchy "TRISCALU:inst4"
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[12]" to "C12"
+    Warning (275081): Converted element name(s) from "C[13]" to "C13"
+    Warning (275081): Converted element name(s) from "C[14]" to "C14"
+Info (12128): Elaborating entity "ALU" for hierarchy "TRISCALU:inst4|ALU:inst"
+Info (12128): Elaborating entity "Adder_Subtractor" for hierarchy "TRISCALU:inst4|ALU:inst|Adder_Subtractor:inst1"
+Info (12128): Elaborating entity "full_adder" for hierarchy "TRISCALU:inst4|ALU:inst|Adder_Subtractor:inst1|full_adder:fa0"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "TRISCALU:inst4|ALU:inst|BUSMUX:inst3"
+Info (12130): Elaborated megafunction instantiation "TRISCALU:inst4|ALU:inst|BUSMUX:inst3"
+Info (12133): Instantiated megafunction "TRISCALU:inst4|ALU:inst|BUSMUX:inst3" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "4"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "TRISCALU:inst4|ALU:inst|BUSMUX:inst3|lpm_mux:$00000"
+Info (12131): Elaborated megafunction instantiation "TRISCALU:inst4|ALU:inst|BUSMUX:inst3|lpm_mux:$00000", which is child of megafunction instantiation "TRISCALU:inst4|ALU:inst|BUSMUX:inst3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_omc.tdf
+    Info (12023): Found entity 1: mux_omc
+Info (12128): Elaborating entity "mux_omc" for hierarchy "TRISCALU:inst4|ALU:inst|BUSMUX:inst3|lpm_mux:$00000|mux_omc:auto_generated"
+Info (12128): Elaborating entity "AND_XOR" for hierarchy "TRISCALU:inst4|ALU:inst|AND_XOR:inst2"
+Info (12128): Elaborating entity "ACC" for hierarchy "ACC:inst3"
+Info (12128): Elaborating entity "74157" for hierarchy "ACC:inst3|74157:inst1"
+Info (12130): Elaborated megafunction instantiation "ACC:inst3|74157:inst1"
+Info (12128): Elaborating entity "TRISCRAM" for hierarchy "TRISCRAM:inst"
+Info (12128): Elaborating entity "TRISCRAMfall2020" for hierarchy "TRISCRAM:inst|TRISCRAMfall2020:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "TRISCRAMfall2020.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "4"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7vc1.tdf
+    Info (12023): Found entity 1: altsyncram_7vc1
+Info (12128): Elaborating entity "altsyncram_7vc1" for hierarchy "TRISCRAM:inst|TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated"
+Info (12128): Elaborating entity "IR" for hierarchy "IR:inst6"
+Info (12128): Elaborating entity "TRISCHEX" for hierarchy "TRISCHEX:inst8"
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CU:inst7|FSM:inst1|CONTROL[14]" merged with LATCH primitive "CU:inst7|FSM:inst1|CONTROL[15]"
+    Info (13026): Duplicate LATCH primitive "CU:inst7|FSM:inst1|CONTROL[2]" merged with LATCH primitive "CU:inst7|FSM:inst1|CONTROL[7]"
+Warning (13012): Latch CU:inst7|FSM:inst1|nextstate.JMP1_699 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU:inst7|FSM:inst1|state.DECODE
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "PC:inst2|74193:inst|23" is converted into an equivalent circuit using register "PC:inst2|74193:inst|23~_emulated" and latch "PC:inst2|74193:inst|23~1"
+    Warning (13310): Register "PC:inst2|74193:inst|24" is converted into an equivalent circuit using register "PC:inst2|74193:inst|24~_emulated" and latch "PC:inst2|74193:inst|24~1"
+    Warning (13310): Register "PC:inst2|74193:inst|25" is converted into an equivalent circuit using register "PC:inst2|74193:inst|25~_emulated" and latch "PC:inst2|74193:inst|25~1"
+    Warning (13310): Register "PC:inst2|74193:inst|26" is converted into an equivalent circuit using register "PC:inst2|74193:inst|26~_emulated" and latch "PC:inst2|74193:inst|26~1"
+    Warning (13310): Register "ACC:inst3|74193:inst|23" is converted into an equivalent circuit using register "ACC:inst3|74193:inst|23~_emulated" and latch "ACC:inst3|74193:inst|23~1"
+    Warning (13310): Register "ACC:inst3|74193:inst|24" is converted into an equivalent circuit using register "ACC:inst3|74193:inst|24~_emulated" and latch "ACC:inst3|74193:inst|24~1"
+    Warning (13310): Register "ACC:inst3|74193:inst|25" is converted into an equivalent circuit using register "ACC:inst3|74193:inst|25~_emulated" and latch "ACC:inst3|74193:inst|25~1"
+    Warning (13310): Register "ACC:inst3|74193:inst|26" is converted into an equivalent circuit using register "ACC:inst3|74193:inst|26~_emulated" and latch "ACC:inst3|74193:inst|26~1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "C[6]" is stuck at GND
+    Warning (13410): Pin "MDI[7]" is stuck at GND
+    Warning (13410): Pin "MDI[6]" is stuck at GND
+    Warning (13410): Pin "MDI[5]" is stuck at GND
+    Warning (13410): Pin "MDI[4]" is stuck at GND
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCPROCESSOR/output_files/TRISCPROCESSOR.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 227 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Thu Dec 03 23:10:25 2020
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCPROCESSOR/output_files/TRISCPROCESSOR.map.smsg.
+
+

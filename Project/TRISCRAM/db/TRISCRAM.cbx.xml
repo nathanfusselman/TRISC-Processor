@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TRISCRAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TRISCRAM|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TRISCRAM|TRISCRAMfall2020:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7vc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

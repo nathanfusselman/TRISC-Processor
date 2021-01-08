@@ -1,0 +1,9 @@
+{ "Info" "0" "" "qar.tcl version #1" {  } {  } 0 0 "qar.tcl version #1" 0 0 "0" 0 0 1601647493759 ""}
+{ "Info" "0" "" "Including '-use_file_set basic' by default" {  } {  } 0 0 "Including '-use_file_set basic' by default" 0 0 "0" 0 0 1601647494408 ""}
+{ "Info" "0" "" "Initializing files for 'Lab_1_Section_1' revision" {  } {  } 0 0 "Initializing files for 'Lab_1_Section_1' revision" 0 0 "0" 0 0 1601647494917 ""}
+{ "Info" "0" "" "File Set 'Source control' contains:" { { "Info" "0" "" "Project source and settings files" {  } {  } 0 0 "Project source and settings files" 0 0 "0" 0 0 1601647494949 ""} { "Info" "0" "" "Automatically detected source files" {  } {  } 0 0 "Automatically detected source files" 0 0 "0" 0 0 1601647494949 ""}  } {  } 0 0 "File Set 'Source control' contains:" 0 0 "0" 0 0 1601647494949 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1601647495848 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1601647495864 ""}
+{ "Info" "0" "" "Generated archive 'Lab_1_Section_1_tmp_archive.qar'" {  } {  } 0 0 "Generated archive 'Lab_1_Section_1_tmp_archive.qar'" 0 0 "0" 0 0 1601647495864 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1601647495864 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1601647495864 ""}

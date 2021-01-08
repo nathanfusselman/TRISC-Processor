@@ -1,0 +1,973 @@
+TimeQuest Timing Analyzer report for TRISCRAM
+Wed Nov 25 15:39:22 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK'
+ 24. Fast Model Hold: 'CLK'
+ 25. Fast Model Minimum Pulse Width: 'CLK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; TRISCRAM                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20AF484A7                                                     ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                           ;
++------------+-----------------+------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
++------------+-----------------+------------+-------------------------------------------------------+
+; 271.15 MHz ; 195.01 MHz      ; CLK        ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -2.688 ; -38.968       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 2.884 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -2.064 ; -121.343              ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                                                                                                                                                                                   ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                            ; To Node                                                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.688 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.024     ; 3.623      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
+; -2.183 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.023     ; 3.119      ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                                                                                                                                                   ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                            ; To Node                                                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 2.884 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.023     ; 3.119      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
+; 3.389 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.024     ; 3.623      ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3|combout                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3|combout                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3|datad                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3|datad                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3~clkctrl|inclk[0]                                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3~clkctrl|inclk[0]                                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3~clkctrl|outclk                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3~clkctrl|outclk                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|altsyncram_component|auto_generated|ram_block1a0|clk0                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|altsyncram_component|auto_generated|ram_block1a0|clk0                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C[*]      ; CLK        ; 3.931 ; 3.931 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; 3.931 ; 3.931 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; 3.628 ; 3.628 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; 4.235 ; 4.235 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; 4.235 ; 4.235 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; 4.211 ; 4.211 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; 4.005 ; 4.005 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; 4.228 ; 4.228 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; 3.954 ; 3.954 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; 2.809 ; 2.809 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; 2.784 ; 2.784 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; 3.515 ; 3.515 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; 2.840 ; 2.840 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; 2.812 ; 2.812 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; 3.954 ; 3.954 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; 3.118 ; 3.118 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; 2.837 ; 2.837 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; 4.292 ; 4.292 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; 4.292 ; 4.292 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; 4.010 ; 4.010 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; 4.283 ; 4.283 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; 4.008 ; 4.008 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; C[*]      ; CLK        ; -3.329 ; -3.329 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; -3.609 ; -3.609 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; -3.329 ; -3.329 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; -3.706 ; -3.706 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; -3.936 ; -3.936 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; -3.912 ; -3.912 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; -3.706 ; -3.706 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; -3.929 ; -3.929 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; -2.485 ; -2.485 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; -2.510 ; -2.510 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; -2.485 ; -2.485 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; -3.216 ; -3.216 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; -2.541 ; -2.541 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; -2.513 ; -2.513 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; -3.655 ; -3.655 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; -2.819 ; -2.819 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; -2.538 ; -2.538 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; -3.709 ; -3.709 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; -3.993 ; -3.993 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; -3.711 ; -3.711 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; -3.984 ; -3.984 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; -3.709 ; -3.709 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 8.846 ; 8.846 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 8.248 ; 8.248 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 8.512 ; 8.512 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 8.551 ; 8.551 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 8.532 ; 8.532 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 8.846 ; 8.846 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 8.248 ; 8.248 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 8.512 ; 8.512 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 8.551 ; 8.551 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 8.532 ; 8.532 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 8.846 ; 8.846 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.344 ; -17.840       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 1.750 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -2.000 ; -117.380              ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                                                                                                                                                                                   ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                            ; To Node                                                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -1.344 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.016     ; 2.327      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
+; -0.886 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 1.000        ; -0.017     ; 1.868      ;
++--------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                                                                                                                                                   ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                            ; To Node                                                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 1.750 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                         ; CLK          ; CLK         ; 0.000        ; -0.017     ; 1.868      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
+; 2.208 ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0 ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.327      ;
++-------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[0]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[1]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[2]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[3]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[4]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[5]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[6]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|q_a[7]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; CLK   ; Rise       ; TRISCRAMfall2020:inst|altsyncram:altsyncram_component|altsyncram_7vc1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3|combout                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3|combout                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3|datad                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3|datad                                                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3~clkctrl|inclk[0]                                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3~clkctrl|inclk[0]                                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst3~clkctrl|outclk                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst3~clkctrl|outclk                                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|altsyncram_component|auto_generated|ram_block1a0|clk0                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|altsyncram_component|auto_generated|ram_block1a0|clk0                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C[*]      ; CLK        ; 1.563 ; 1.563 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; 1.563 ; 1.563 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; 1.509 ; 1.509 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; 1.650 ; 1.650 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; 1.641 ; 1.641 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; 1.650 ; 1.650 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; 1.561 ; 1.561 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; 1.634 ; 1.634 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; 1.628 ; 1.628 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; 1.157 ; 1.157 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; 1.136 ; 1.136 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; 1.482 ; 1.482 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; 1.175 ; 1.175 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; 1.163 ; 1.163 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; 1.628 ; 1.628 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; 1.277 ; 1.277 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; 1.173 ; 1.173 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; 1.688 ; 1.688 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; 1.688 ; 1.688 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; 1.557 ; 1.557 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; 1.659 ; 1.659 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; 1.553 ; 1.553 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; C[*]      ; CLK        ; -1.373 ; -1.373 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; -1.418 ; -1.418 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; -1.373 ; -1.373 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; -1.425 ; -1.425 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; -1.505 ; -1.505 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; -1.514 ; -1.514 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; -1.425 ; -1.425 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; -1.498 ; -1.498 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; -1.000 ; -1.000 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; -1.021 ; -1.021 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; -1.000 ; -1.000 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; -1.346 ; -1.346 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; -1.039 ; -1.039 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; -1.027 ; -1.027 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; -1.492 ; -1.492 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; -1.141 ; -1.141 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; -1.037 ; -1.037 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; -1.417 ; -1.417 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; -1.552 ; -1.552 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; -1.421 ; -1.421 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; -1.523 ; -1.523 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; -1.417 ; -1.417 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 4.267 ; 4.267 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 4.068 ; 4.068 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 4.144 ; 4.144 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 4.178 ; 4.178 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 4.186 ; 4.186 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 4.185 ; 4.185 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 4.267 ; 4.267 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 4.072 ; 4.072 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 4.068 ; 4.068 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 4.068 ; 4.068 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 4.144 ; 4.144 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 4.178 ; 4.178 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 4.186 ; 4.186 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 4.185 ; 4.185 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 4.267 ; 4.267 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 4.072 ; 4.072 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.688  ; 1.750 ; N/A      ; N/A     ; -2.064              ;
+;  CLK             ; -2.688  ; 1.750 ; N/A      ; N/A     ; -2.064              ;
+; Design-wide TNS  ; -38.968 ; 0.0   ; 0.0      ; 0.0     ; -121.343            ;
+;  CLK             ; -38.968 ; 0.000 ; N/A      ; N/A     ; -121.343            ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C[*]      ; CLK        ; 3.931 ; 3.931 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; 3.931 ; 3.931 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; 3.628 ; 3.628 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; 4.235 ; 4.235 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; 4.235 ; 4.235 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; 4.211 ; 4.211 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; 4.005 ; 4.005 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; 4.228 ; 4.228 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; 3.954 ; 3.954 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; 2.809 ; 2.809 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; 2.784 ; 2.784 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; 3.515 ; 3.515 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; 2.840 ; 2.840 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; 2.812 ; 2.812 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; 3.954 ; 3.954 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; 3.118 ; 3.118 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; 2.837 ; 2.837 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; 4.292 ; 4.292 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; 4.292 ; 4.292 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; 4.010 ; 4.010 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; 4.283 ; 4.283 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; 4.008 ; 4.008 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; C[*]      ; CLK        ; -1.373 ; -1.373 ; Rise       ; CLK             ;
+;  C[3]     ; CLK        ; -1.418 ; -1.418 ; Rise       ; CLK             ;
+;  C[5]     ; CLK        ; -1.373 ; -1.373 ; Rise       ; CLK             ;
+; MAR[*]    ; CLK        ; -1.425 ; -1.425 ; Rise       ; CLK             ;
+;  MAR[0]   ; CLK        ; -1.505 ; -1.505 ; Rise       ; CLK             ;
+;  MAR[1]   ; CLK        ; -1.514 ; -1.514 ; Rise       ; CLK             ;
+;  MAR[2]   ; CLK        ; -1.425 ; -1.425 ; Rise       ; CLK             ;
+;  MAR[3]   ; CLK        ; -1.498 ; -1.498 ; Rise       ; CLK             ;
+; MDI[*]    ; CLK        ; -1.000 ; -1.000 ; Rise       ; CLK             ;
+;  MDI[0]   ; CLK        ; -1.021 ; -1.021 ; Rise       ; CLK             ;
+;  MDI[1]   ; CLK        ; -1.000 ; -1.000 ; Rise       ; CLK             ;
+;  MDI[2]   ; CLK        ; -1.346 ; -1.346 ; Rise       ; CLK             ;
+;  MDI[3]   ; CLK        ; -1.039 ; -1.039 ; Rise       ; CLK             ;
+;  MDI[4]   ; CLK        ; -1.027 ; -1.027 ; Rise       ; CLK             ;
+;  MDI[5]   ; CLK        ; -1.492 ; -1.492 ; Rise       ; CLK             ;
+;  MDI[6]   ; CLK        ; -1.141 ; -1.141 ; Rise       ; CLK             ;
+;  MDI[7]   ; CLK        ; -1.037 ; -1.037 ; Rise       ; CLK             ;
+; PC[*]     ; CLK        ; -1.417 ; -1.417 ; Rise       ; CLK             ;
+;  PC[0]    ; CLK        ; -1.552 ; -1.552 ; Rise       ; CLK             ;
+;  PC[1]    ; CLK        ; -1.421 ; -1.421 ; Rise       ; CLK             ;
+;  PC[2]    ; CLK        ; -1.523 ; -1.523 ; Rise       ; CLK             ;
+;  PC[3]    ; CLK        ; -1.417 ; -1.417 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 8.846 ; 8.846 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 8.248 ; 8.248 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 8.512 ; 8.512 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 8.551 ; 8.551 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 8.532 ; 8.532 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 8.562 ; 8.562 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 8.846 ; 8.846 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MDO[*]    ; CLK        ; 4.068 ; 4.068 ; Rise       ; CLK             ;
+;  MDO[0]   ; CLK        ; 4.068 ; 4.068 ; Rise       ; CLK             ;
+;  MDO[1]   ; CLK        ; 4.144 ; 4.144 ; Rise       ; CLK             ;
+;  MDO[2]   ; CLK        ; 4.178 ; 4.178 ; Rise       ; CLK             ;
+;  MDO[3]   ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  MDO[4]   ; CLK        ; 4.186 ; 4.186 ; Rise       ; CLK             ;
+;  MDO[5]   ; CLK        ; 4.185 ; 4.185 ; Rise       ; CLK             ;
+;  MDO[6]   ; CLK        ; 4.267 ; 4.267 ; Rise       ; CLK             ;
+;  MDO[7]   ; CLK        ; 4.072 ; 4.072 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 48       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 48       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 21    ; 21   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 25 15:39:19 2020
+Info: Command: quartus_sta TRISCRAM -c TRISCRAM
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'TRISCRAM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.688
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.688       -38.968 CLK 
+Info (332146): Worst-case hold slack is 2.884
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     2.884         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.064
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.064      -121.343 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.344
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.344       -17.840 CLK 
+Info (332146): Worst-case hold slack is 1.750
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.750         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.000      -117.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4538 megabytes
+    Info: Processing ended: Wed Nov 25 15:39:22 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

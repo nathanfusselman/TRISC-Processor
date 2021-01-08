@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ALU_Tester">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALU_Tester|ALU:inst1|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

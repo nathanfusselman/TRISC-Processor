@@ -1,0 +1,23 @@
+Quartus II Archive log --	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020_tmp_archive.qarlog
+
+Archive:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020_tmp_archive.qar
+Date:		Wed Nov 25 15:13:46 2020
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020.mif
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020.qpf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020.qsf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/incremental_db/compiled_partitions/TRISCRAMfall2020.db_info
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/triscramfall2020.v
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Nov 25 15:13:48 2020
+Source archive file:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAMfall2020/TRISCRAMfall2020_tmp_archive.qar
+Archive was extracted into	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Project/TRISCRAM/
+		 - successfully.

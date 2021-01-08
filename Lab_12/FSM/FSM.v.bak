@@ -1,0 +1,17 @@
+module FSM(
+	input [10:0] ID,
+	output reg [15:0] C);
+	reg [5:0] state;
+	parameter START = 6'b000000, FETCH1 = 6'b000001, FETCH2 = 6'b000010, DECODE = 6'b000011,
+				 LDA1 = 6'b000100, LDA2 = 6'b000101, LDA3 = 6'b000110,
+				 STA1 = 6'b001000, STA2 = 6'b001001,
+				 ADD1 = 6'b001100, ADD2 = 6'b001101, ADD3 = 6'b001110, ADD4 = 6'b001111,
+				 SUB1 = 6'b010000,
+				 XOR1 = 6'b010100,
+				 INC1 = 6'b011000,
+				 CLR1 = 6'b011100,
+				 JMP1 = 6'b100000,
+				 JPZ1 = 6'b100100,
+				 JPN1 = 6'b101000,
+				 HLT = 6'b101100;
+	

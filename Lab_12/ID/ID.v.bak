@@ -1,0 +1,23 @@
+module ID(
+	input [3:0] IR,
+	output reg [10:0] OUT);
+	parameter LDA = 4'b0000, STA = 4'b0001, ADD = 4'b0010, SUB = 4'b0011, XOR = 4'b0100, INC = 4'b0110,
+				 CLR = 4'b0111, JMP = 4'b1000, JPZ = 4'b1100, JPN = 4'b1001, HLT = 4'b1111;
+	always @ (IR)
+	begin
+		case (IR)
+			LDA: OUT = 2 ** 0;
+			STA: OUT = 2 ** 1;
+			ADD: OUT = 2 ** 2;
+			SUB: OUT = 2 ** 3;
+			XOR: OUT = 2 ** 4;
+			INC: OUT = 2 ** 5;
+			CLR: OUT = 2 ** 6;
+			JMP: OUT = 2 ** 7;
+			JPZ: OUT = 2 ** 8;
+			JPN: OUT = 2 ** 9;
+			HLT: OUT = 2 ** 10;
+			default: OUT = 0;
+		endcase
+	end
+endmodule

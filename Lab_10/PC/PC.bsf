@@ -1,0 +1,64 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 232 208)
+	(text "PC" (rect 5 0 20 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 128 25 140)(font "Arial" ))
+	(port
+		(pt 80 144)
+		(input)
+		(text "C[1]" (rect 0 16 22 30)(font "Arial" (font_size 8)))
+		(text "C[1]" (rect 72 96 86 118)(font "Arial" (font_size 8))(vertical))
+		(line (pt 80 144)(pt 80 127))
+	)
+	(port
+		(pt 96 0)
+		(input)
+		(text "MDO[3..0]" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "MDO[3..0]" (rect 88 25 102 80)(font "Arial" (font_size 8))(vertical))
+		(line (pt 96 0)(pt 96 16)(line_width 3))
+	)
+	(port
+		(pt 112 144)
+		(input)
+		(text "C[2]" (rect 0 16 22 30)(font "Arial" (font_size 8)))
+		(text "C[2]" (rect 104 96 118 118)(font "Arial" (font_size 8))(vertical))
+		(line (pt 112 144)(pt 112 127))
+	)
+	(port
+		(pt 48 144)
+		(input)
+		(text "C[0]" (rect 0 16 22 30)(font "Arial" (font_size 8)))
+		(text "C[0]" (rect 40 96 54 118)(font "Arial" (font_size 8))(vertical))
+		(line (pt 48 144)(pt 48 127))
+	)
+	(port
+		(pt 64 0)
+		(output)
+		(text "ADDR[3..0]" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "ADDR[3..0]" (rect 56 23 70 85)(font "Arial" (font_size 8))(vertical))
+		(line (pt 64 0)(pt 64 16)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 128))
+	)
+)

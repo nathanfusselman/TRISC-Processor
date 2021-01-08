@@ -1,0 +1,103 @@
+|Lock
+Z <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+X => inst9.IN0
+X => J0:inst3.X
+X => J1:inst5.X
+X => K2:inst8.X
+X => J2:inst13.X
+CLK => 74112:inst.1CLK
+CLK => 74112:inst.2CLK
+CLK => 74112:inst1.1CLK
+CLK => 74112:inst1.2CLK
+CLR => 74112:inst.1CLRN
+CLR => 74112:inst.2CLRN
+CLR => 74112:inst1.1CLRN
+CLR => 74112:inst1.2CLRN
+Y1 <= 74112:inst.1Q
+Y2 <= 74112:inst.2Q
+Y3 <= 74112:inst1.1Q
+
+
+|Lock|74112:inst1
+2QN <= 5.DB_MAX_OUTPUT_PORT_TYPE
+2PRN => 7.PRESET
+2CLRN => 7.ACLR
+2K => 7.IN0
+2J => 7.IN1
+2CLK => 24.IN0
+2Q <= 7.DB_MAX_OUTPUT_PORT_TYPE
+1QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+1PRN => 8.PRESET
+1CLRN => 8.ACLR
+1K => 8.IN0
+1J => 8.IN1
+1CLK => 23.IN0
+1Q <= 8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lock|K2:inst8
+K2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y1 => inst.IN0
+Y2n => inst.IN1
+Xn => inst.IN2
+Y1n => inst2.IN0
+X => inst2.IN1
+
+
+|Lock|74112:inst
+2QN <= 5.DB_MAX_OUTPUT_PORT_TYPE
+2PRN => 7.PRESET
+2CLRN => 7.ACLR
+2K => 7.IN0
+2J => 7.IN1
+2CLK => 24.IN0
+2Q <= 7.DB_MAX_OUTPUT_PORT_TYPE
+1QN <= 6.DB_MAX_OUTPUT_PORT_TYPE
+1PRN => 8.PRESET
+1CLRN => 8.ACLR
+1K => 8.IN0
+1J => 8.IN1
+1CLK => 23.IN0
+1Q <= 8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lock|K0:inst15
+K0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y2n => inst.IN0
+Y3 => inst.IN1
+Xn => inst.IN2
+Y2 => inst2.IN0
+Y3n => inst2.IN1
+
+
+|Lock|J0:inst3
+J0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y2 => inst2.IN0
+Y3 => inst.IN0
+X => inst.IN1
+
+
+|Lock|K1:inst6
+K1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y1n => inst.IN0
+Xn => inst.IN1
+Y3n => inst2.IN1
+
+
+|Lock|J1:inst5
+J1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Xn => inst3.IN0
+Xn => inst.IN1
+Y1n => inst3.IN1
+Y1 => inst2.IN0
+X => inst2.IN1
+Y3n => inst.IN0
+
+
+|Lock|J2:inst13
+J2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Y1n => inst.IN0
+Y2n => inst.IN1
+X => inst.IN2
+
+

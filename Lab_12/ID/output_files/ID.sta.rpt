@@ -1,0 +1,552 @@
+TimeQuest Timing Analyzer report for ID
+Wed Nov 25 13:52:33 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; ID                                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20AF484A7                                                     ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 6.198 ; 6.198 ;       ;
+; IR[0]      ; ID[1]       ; 6.196 ;       ;       ; 6.196 ;
+; IR[0]      ; ID[2]       ;       ; 6.205 ; 6.205 ;       ;
+; IR[0]      ; ID[3]       ; 6.551 ;       ;       ; 6.551 ;
+; IR[0]      ; ID[4]       ;       ; 6.532 ; 6.532 ;       ;
+; IR[0]      ; ID[5]       ;       ; 6.585 ; 6.585 ;       ;
+; IR[0]      ; ID[6]       ; 6.580 ;       ;       ; 6.580 ;
+; IR[0]      ; ID[7]       ;       ; 6.524 ; 6.524 ;       ;
+; IR[0]      ; ID[8]       ;       ; 6.552 ; 6.552 ;       ;
+; IR[0]      ; ID[9]       ; 6.532 ;       ;       ; 6.532 ;
+; IR[0]      ; ID[10]      ; 6.518 ;       ;       ; 6.518 ;
+; IR[1]      ; ID[0]       ;       ; 6.354 ; 6.354 ;       ;
+; IR[1]      ; ID[1]       ;       ; 6.348 ; 6.348 ;       ;
+; IR[1]      ; ID[2]       ; 6.453 ;       ;       ; 6.453 ;
+; IR[1]      ; ID[3]       ; 6.805 ;       ;       ; 6.805 ;
+; IR[1]      ; ID[4]       ;       ; 6.684 ; 6.684 ;       ;
+; IR[1]      ; ID[5]       ; 6.795 ;       ;       ; 6.795 ;
+; IR[1]      ; ID[6]       ; 6.798 ;       ;       ; 6.798 ;
+; IR[1]      ; ID[7]       ;       ; 6.680 ; 6.680 ;       ;
+; IR[1]      ; ID[8]       ;       ; 6.696 ; 6.696 ;       ;
+; IR[1]      ; ID[9]       ;       ; 6.694 ; 6.694 ;       ;
+; IR[1]      ; ID[10]      ; 6.733 ;       ;       ; 6.733 ;
+; IR[2]      ; ID[0]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[1]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[2]       ;       ; 6.039 ; 6.039 ;       ;
+; IR[2]      ; ID[3]       ;       ; 6.389 ; 6.389 ;       ;
+; IR[2]      ; ID[4]       ; 6.373 ;       ;       ; 6.373 ;
+; IR[2]      ; ID[5]       ; 6.437 ;       ;       ; 6.437 ;
+; IR[2]      ; ID[6]       ; 6.424 ;       ;       ; 6.424 ;
+; IR[2]      ; ID[7]       ;       ; 6.379 ; 6.379 ;       ;
+; IR[2]      ; ID[8]       ; 6.409 ;       ;       ; 6.409 ;
+; IR[2]      ; ID[9]       ;       ; 6.374 ; 6.374 ;       ;
+; IR[2]      ; ID[10]      ; 6.368 ;       ;       ; 6.368 ;
+; IR[3]      ; ID[0]       ;       ; 6.824 ; 6.824 ;       ;
+; IR[3]      ; ID[1]       ;       ; 6.825 ; 6.825 ;       ;
+; IR[3]      ; ID[2]       ;       ; 6.837 ; 6.837 ;       ;
+; IR[3]      ; ID[3]       ;       ; 7.189 ; 7.189 ;       ;
+; IR[3]      ; ID[4]       ;       ; 7.123 ; 7.123 ;       ;
+; IR[3]      ; ID[5]       ;       ; 7.183 ; 7.183 ;       ;
+; IR[3]      ; ID[6]       ;       ; 7.181 ; 7.181 ;       ;
+; IR[3]      ; ID[7]       ; 7.220 ;       ;       ; 7.220 ;
+; IR[3]      ; ID[8]       ; 7.210 ;       ;       ; 7.210 ;
+; IR[3]      ; ID[9]       ; 7.227 ;       ;       ; 7.227 ;
+; IR[3]      ; ID[10]      ; 7.187 ;       ;       ; 7.187 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 6.198 ; 6.198 ;       ;
+; IR[0]      ; ID[1]       ; 6.196 ;       ;       ; 6.196 ;
+; IR[0]      ; ID[2]       ;       ; 6.205 ; 6.205 ;       ;
+; IR[0]      ; ID[3]       ; 6.551 ;       ;       ; 6.551 ;
+; IR[0]      ; ID[4]       ;       ; 6.532 ; 6.532 ;       ;
+; IR[0]      ; ID[5]       ;       ; 6.585 ; 6.585 ;       ;
+; IR[0]      ; ID[6]       ; 6.580 ;       ;       ; 6.580 ;
+; IR[0]      ; ID[7]       ;       ; 6.524 ; 6.524 ;       ;
+; IR[0]      ; ID[8]       ;       ; 6.552 ; 6.552 ;       ;
+; IR[0]      ; ID[9]       ; 6.532 ;       ;       ; 6.532 ;
+; IR[0]      ; ID[10]      ; 6.518 ;       ;       ; 6.518 ;
+; IR[1]      ; ID[0]       ;       ; 6.354 ; 6.354 ;       ;
+; IR[1]      ; ID[1]       ;       ; 6.348 ; 6.348 ;       ;
+; IR[1]      ; ID[2]       ; 6.453 ;       ;       ; 6.453 ;
+; IR[1]      ; ID[3]       ; 6.805 ;       ;       ; 6.805 ;
+; IR[1]      ; ID[4]       ;       ; 6.684 ; 6.684 ;       ;
+; IR[1]      ; ID[5]       ; 6.795 ;       ;       ; 6.795 ;
+; IR[1]      ; ID[6]       ; 6.798 ;       ;       ; 6.798 ;
+; IR[1]      ; ID[7]       ;       ; 6.680 ; 6.680 ;       ;
+; IR[1]      ; ID[8]       ;       ; 6.696 ; 6.696 ;       ;
+; IR[1]      ; ID[9]       ;       ; 6.694 ; 6.694 ;       ;
+; IR[1]      ; ID[10]      ; 6.733 ;       ;       ; 6.733 ;
+; IR[2]      ; ID[0]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[1]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[2]       ;       ; 6.039 ; 6.039 ;       ;
+; IR[2]      ; ID[3]       ;       ; 6.389 ; 6.389 ;       ;
+; IR[2]      ; ID[4]       ; 6.373 ;       ;       ; 6.373 ;
+; IR[2]      ; ID[5]       ; 6.437 ;       ;       ; 6.437 ;
+; IR[2]      ; ID[6]       ; 6.424 ;       ;       ; 6.424 ;
+; IR[2]      ; ID[7]       ;       ; 6.379 ; 6.379 ;       ;
+; IR[2]      ; ID[8]       ; 6.409 ;       ;       ; 6.409 ;
+; IR[2]      ; ID[9]       ;       ; 6.374 ; 6.374 ;       ;
+; IR[2]      ; ID[10]      ; 6.368 ;       ;       ; 6.368 ;
+; IR[3]      ; ID[0]       ;       ; 6.824 ; 6.824 ;       ;
+; IR[3]      ; ID[1]       ;       ; 6.825 ; 6.825 ;       ;
+; IR[3]      ; ID[2]       ;       ; 6.837 ; 6.837 ;       ;
+; IR[3]      ; ID[3]       ;       ; 7.189 ; 7.189 ;       ;
+; IR[3]      ; ID[4]       ;       ; 7.123 ; 7.123 ;       ;
+; IR[3]      ; ID[5]       ;       ; 7.183 ; 7.183 ;       ;
+; IR[3]      ; ID[6]       ;       ; 7.181 ; 7.181 ;       ;
+; IR[3]      ; ID[7]       ; 7.220 ;       ;       ; 7.220 ;
+; IR[3]      ; ID[8]       ; 7.210 ;       ;       ; 7.210 ;
+; IR[3]      ; ID[9]       ; 7.227 ;       ;       ; 7.227 ;
+; IR[3]      ; ID[10]      ; 7.187 ;       ;       ; 7.187 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 2.707 ; 2.707 ;       ;
+; IR[0]      ; ID[1]       ; 2.729 ;       ;       ; 2.729 ;
+; IR[0]      ; ID[2]       ;       ; 2.713 ; 2.713 ;       ;
+; IR[0]      ; ID[3]       ; 2.855 ;       ;       ; 2.855 ;
+; IR[0]      ; ID[4]       ;       ; 2.826 ; 2.826 ;       ;
+; IR[0]      ; ID[5]       ;       ; 2.857 ; 2.857 ;       ;
+; IR[0]      ; ID[6]       ; 2.878 ;       ;       ; 2.878 ;
+; IR[0]      ; ID[7]       ;       ; 2.821 ; 2.821 ;       ;
+; IR[0]      ; ID[8]       ;       ; 2.828 ; 2.828 ;       ;
+; IR[0]      ; ID[9]       ; 2.836 ;       ;       ; 2.836 ;
+; IR[0]      ; ID[10]      ; 2.835 ;       ;       ; 2.835 ;
+; IR[1]      ; ID[0]       ;       ; 2.780 ; 2.780 ;       ;
+; IR[1]      ; ID[1]       ;       ; 2.776 ; 2.776 ;       ;
+; IR[1]      ; ID[2]       ; 2.788 ;       ;       ; 2.788 ;
+; IR[1]      ; ID[3]       ; 2.905 ;       ;       ; 2.905 ;
+; IR[1]      ; ID[4]       ;       ; 2.896 ; 2.896 ;       ;
+; IR[1]      ; ID[5]       ; 2.933 ;       ;       ; 2.933 ;
+; IR[1]      ; ID[6]       ; 2.930 ;       ;       ; 2.930 ;
+; IR[1]      ; ID[7]       ;       ; 2.894 ; 2.894 ;       ;
+; IR[1]      ; ID[8]       ;       ; 2.895 ; 2.895 ;       ;
+; IR[1]      ; ID[9]       ;       ; 2.885 ; 2.885 ;       ;
+; IR[1]      ; ID[10]      ; 2.885 ;       ;       ; 2.885 ;
+; IR[2]      ; ID[0]       ;       ; 2.662 ; 2.662 ;       ;
+; IR[2]      ; ID[1]       ;       ; 2.663 ; 2.663 ;       ;
+; IR[2]      ; ID[2]       ;       ; 2.653 ; 2.653 ;       ;
+; IR[2]      ; ID[3]       ;       ; 2.773 ; 2.773 ;       ;
+; IR[2]      ; ID[4]       ; 2.772 ;       ;       ; 2.772 ;
+; IR[2]      ; ID[5]       ; 2.812 ;       ;       ; 2.812 ;
+; IR[2]      ; ID[6]       ; 2.802 ;       ;       ; 2.802 ;
+; IR[2]      ; ID[7]       ;       ; 2.777 ; 2.777 ;       ;
+; IR[2]      ; ID[8]       ; 2.789 ;       ;       ; 2.789 ;
+; IR[2]      ; ID[9]       ;       ; 2.756 ; 2.756 ;       ;
+; IR[2]      ; ID[10]      ; 2.764 ;       ;       ; 2.764 ;
+; IR[3]      ; ID[0]       ;       ; 2.959 ; 2.959 ;       ;
+; IR[3]      ; ID[1]       ;       ; 2.961 ; 2.961 ;       ;
+; IR[3]      ; ID[2]       ;       ; 2.963 ; 2.963 ;       ;
+; IR[3]      ; ID[3]       ;       ; 3.080 ; 3.080 ;       ;
+; IR[3]      ; ID[4]       ;       ; 3.073 ; 3.073 ;       ;
+; IR[3]      ; ID[5]       ;       ; 3.109 ; 3.109 ;       ;
+; IR[3]      ; ID[6]       ;       ; 3.104 ; 3.104 ;       ;
+; IR[3]      ; ID[7]       ; 3.075 ;       ;       ; 3.075 ;
+; IR[3]      ; ID[8]       ; 3.086 ;       ;       ; 3.086 ;
+; IR[3]      ; ID[9]       ; 3.061 ;       ;       ; 3.061 ;
+; IR[3]      ; ID[10]      ; 3.064 ;       ;       ; 3.064 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 2.707 ; 2.707 ;       ;
+; IR[0]      ; ID[1]       ; 2.729 ;       ;       ; 2.729 ;
+; IR[0]      ; ID[2]       ;       ; 2.713 ; 2.713 ;       ;
+; IR[0]      ; ID[3]       ; 2.855 ;       ;       ; 2.855 ;
+; IR[0]      ; ID[4]       ;       ; 2.826 ; 2.826 ;       ;
+; IR[0]      ; ID[5]       ;       ; 2.857 ; 2.857 ;       ;
+; IR[0]      ; ID[6]       ; 2.878 ;       ;       ; 2.878 ;
+; IR[0]      ; ID[7]       ;       ; 2.821 ; 2.821 ;       ;
+; IR[0]      ; ID[8]       ;       ; 2.828 ; 2.828 ;       ;
+; IR[0]      ; ID[9]       ; 2.836 ;       ;       ; 2.836 ;
+; IR[0]      ; ID[10]      ; 2.835 ;       ;       ; 2.835 ;
+; IR[1]      ; ID[0]       ;       ; 2.780 ; 2.780 ;       ;
+; IR[1]      ; ID[1]       ;       ; 2.776 ; 2.776 ;       ;
+; IR[1]      ; ID[2]       ; 2.788 ;       ;       ; 2.788 ;
+; IR[1]      ; ID[3]       ; 2.905 ;       ;       ; 2.905 ;
+; IR[1]      ; ID[4]       ;       ; 2.896 ; 2.896 ;       ;
+; IR[1]      ; ID[5]       ; 2.933 ;       ;       ; 2.933 ;
+; IR[1]      ; ID[6]       ; 2.930 ;       ;       ; 2.930 ;
+; IR[1]      ; ID[7]       ;       ; 2.894 ; 2.894 ;       ;
+; IR[1]      ; ID[8]       ;       ; 2.895 ; 2.895 ;       ;
+; IR[1]      ; ID[9]       ;       ; 2.885 ; 2.885 ;       ;
+; IR[1]      ; ID[10]      ; 2.885 ;       ;       ; 2.885 ;
+; IR[2]      ; ID[0]       ;       ; 2.662 ; 2.662 ;       ;
+; IR[2]      ; ID[1]       ;       ; 2.663 ; 2.663 ;       ;
+; IR[2]      ; ID[2]       ;       ; 2.653 ; 2.653 ;       ;
+; IR[2]      ; ID[3]       ;       ; 2.773 ; 2.773 ;       ;
+; IR[2]      ; ID[4]       ; 2.772 ;       ;       ; 2.772 ;
+; IR[2]      ; ID[5]       ; 2.812 ;       ;       ; 2.812 ;
+; IR[2]      ; ID[6]       ; 2.802 ;       ;       ; 2.802 ;
+; IR[2]      ; ID[7]       ;       ; 2.777 ; 2.777 ;       ;
+; IR[2]      ; ID[8]       ; 2.789 ;       ;       ; 2.789 ;
+; IR[2]      ; ID[9]       ;       ; 2.756 ; 2.756 ;       ;
+; IR[2]      ; ID[10]      ; 2.764 ;       ;       ; 2.764 ;
+; IR[3]      ; ID[0]       ;       ; 2.959 ; 2.959 ;       ;
+; IR[3]      ; ID[1]       ;       ; 2.961 ; 2.961 ;       ;
+; IR[3]      ; ID[2]       ;       ; 2.963 ; 2.963 ;       ;
+; IR[3]      ; ID[3]       ;       ; 3.080 ; 3.080 ;       ;
+; IR[3]      ; ID[4]       ;       ; 3.073 ; 3.073 ;       ;
+; IR[3]      ; ID[5]       ;       ; 3.109 ; 3.109 ;       ;
+; IR[3]      ; ID[6]       ;       ; 3.104 ; 3.104 ;       ;
+; IR[3]      ; ID[7]       ; 3.075 ;       ;       ; 3.075 ;
+; IR[3]      ; ID[8]       ; 3.086 ;       ;       ; 3.086 ;
+; IR[3]      ; ID[9]       ; 3.061 ;       ;       ; 3.061 ;
+; IR[3]      ; ID[10]      ; 3.064 ;       ;       ; 3.064 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++----------------------------------------------------------+
+; Progagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 6.198 ; 6.198 ;       ;
+; IR[0]      ; ID[1]       ; 6.196 ;       ;       ; 6.196 ;
+; IR[0]      ; ID[2]       ;       ; 6.205 ; 6.205 ;       ;
+; IR[0]      ; ID[3]       ; 6.551 ;       ;       ; 6.551 ;
+; IR[0]      ; ID[4]       ;       ; 6.532 ; 6.532 ;       ;
+; IR[0]      ; ID[5]       ;       ; 6.585 ; 6.585 ;       ;
+; IR[0]      ; ID[6]       ; 6.580 ;       ;       ; 6.580 ;
+; IR[0]      ; ID[7]       ;       ; 6.524 ; 6.524 ;       ;
+; IR[0]      ; ID[8]       ;       ; 6.552 ; 6.552 ;       ;
+; IR[0]      ; ID[9]       ; 6.532 ;       ;       ; 6.532 ;
+; IR[0]      ; ID[10]      ; 6.518 ;       ;       ; 6.518 ;
+; IR[1]      ; ID[0]       ;       ; 6.354 ; 6.354 ;       ;
+; IR[1]      ; ID[1]       ;       ; 6.348 ; 6.348 ;       ;
+; IR[1]      ; ID[2]       ; 6.453 ;       ;       ; 6.453 ;
+; IR[1]      ; ID[3]       ; 6.805 ;       ;       ; 6.805 ;
+; IR[1]      ; ID[4]       ;       ; 6.684 ; 6.684 ;       ;
+; IR[1]      ; ID[5]       ; 6.795 ;       ;       ; 6.795 ;
+; IR[1]      ; ID[6]       ; 6.798 ;       ;       ; 6.798 ;
+; IR[1]      ; ID[7]       ;       ; 6.680 ; 6.680 ;       ;
+; IR[1]      ; ID[8]       ;       ; 6.696 ; 6.696 ;       ;
+; IR[1]      ; ID[9]       ;       ; 6.694 ; 6.694 ;       ;
+; IR[1]      ; ID[10]      ; 6.733 ;       ;       ; 6.733 ;
+; IR[2]      ; ID[0]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[1]       ;       ; 6.052 ; 6.052 ;       ;
+; IR[2]      ; ID[2]       ;       ; 6.039 ; 6.039 ;       ;
+; IR[2]      ; ID[3]       ;       ; 6.389 ; 6.389 ;       ;
+; IR[2]      ; ID[4]       ; 6.373 ;       ;       ; 6.373 ;
+; IR[2]      ; ID[5]       ; 6.437 ;       ;       ; 6.437 ;
+; IR[2]      ; ID[6]       ; 6.424 ;       ;       ; 6.424 ;
+; IR[2]      ; ID[7]       ;       ; 6.379 ; 6.379 ;       ;
+; IR[2]      ; ID[8]       ; 6.409 ;       ;       ; 6.409 ;
+; IR[2]      ; ID[9]       ;       ; 6.374 ; 6.374 ;       ;
+; IR[2]      ; ID[10]      ; 6.368 ;       ;       ; 6.368 ;
+; IR[3]      ; ID[0]       ;       ; 6.824 ; 6.824 ;       ;
+; IR[3]      ; ID[1]       ;       ; 6.825 ; 6.825 ;       ;
+; IR[3]      ; ID[2]       ;       ; 6.837 ; 6.837 ;       ;
+; IR[3]      ; ID[3]       ;       ; 7.189 ; 7.189 ;       ;
+; IR[3]      ; ID[4]       ;       ; 7.123 ; 7.123 ;       ;
+; IR[3]      ; ID[5]       ;       ; 7.183 ; 7.183 ;       ;
+; IR[3]      ; ID[6]       ;       ; 7.181 ; 7.181 ;       ;
+; IR[3]      ; ID[7]       ; 7.220 ;       ;       ; 7.220 ;
+; IR[3]      ; ID[8]       ; 7.210 ;       ;       ; 7.210 ;
+; IR[3]      ; ID[9]       ; 7.227 ;       ;       ; 7.227 ;
+; IR[3]      ; ID[10]      ; 7.187 ;       ;       ; 7.187 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; IR[0]      ; ID[0]       ;       ; 2.707 ; 2.707 ;       ;
+; IR[0]      ; ID[1]       ; 2.729 ;       ;       ; 2.729 ;
+; IR[0]      ; ID[2]       ;       ; 2.713 ; 2.713 ;       ;
+; IR[0]      ; ID[3]       ; 2.855 ;       ;       ; 2.855 ;
+; IR[0]      ; ID[4]       ;       ; 2.826 ; 2.826 ;       ;
+; IR[0]      ; ID[5]       ;       ; 2.857 ; 2.857 ;       ;
+; IR[0]      ; ID[6]       ; 2.878 ;       ;       ; 2.878 ;
+; IR[0]      ; ID[7]       ;       ; 2.821 ; 2.821 ;       ;
+; IR[0]      ; ID[8]       ;       ; 2.828 ; 2.828 ;       ;
+; IR[0]      ; ID[9]       ; 2.836 ;       ;       ; 2.836 ;
+; IR[0]      ; ID[10]      ; 2.835 ;       ;       ; 2.835 ;
+; IR[1]      ; ID[0]       ;       ; 2.780 ; 2.780 ;       ;
+; IR[1]      ; ID[1]       ;       ; 2.776 ; 2.776 ;       ;
+; IR[1]      ; ID[2]       ; 2.788 ;       ;       ; 2.788 ;
+; IR[1]      ; ID[3]       ; 2.905 ;       ;       ; 2.905 ;
+; IR[1]      ; ID[4]       ;       ; 2.896 ; 2.896 ;       ;
+; IR[1]      ; ID[5]       ; 2.933 ;       ;       ; 2.933 ;
+; IR[1]      ; ID[6]       ; 2.930 ;       ;       ; 2.930 ;
+; IR[1]      ; ID[7]       ;       ; 2.894 ; 2.894 ;       ;
+; IR[1]      ; ID[8]       ;       ; 2.895 ; 2.895 ;       ;
+; IR[1]      ; ID[9]       ;       ; 2.885 ; 2.885 ;       ;
+; IR[1]      ; ID[10]      ; 2.885 ;       ;       ; 2.885 ;
+; IR[2]      ; ID[0]       ;       ; 2.662 ; 2.662 ;       ;
+; IR[2]      ; ID[1]       ;       ; 2.663 ; 2.663 ;       ;
+; IR[2]      ; ID[2]       ;       ; 2.653 ; 2.653 ;       ;
+; IR[2]      ; ID[3]       ;       ; 2.773 ; 2.773 ;       ;
+; IR[2]      ; ID[4]       ; 2.772 ;       ;       ; 2.772 ;
+; IR[2]      ; ID[5]       ; 2.812 ;       ;       ; 2.812 ;
+; IR[2]      ; ID[6]       ; 2.802 ;       ;       ; 2.802 ;
+; IR[2]      ; ID[7]       ;       ; 2.777 ; 2.777 ;       ;
+; IR[2]      ; ID[8]       ; 2.789 ;       ;       ; 2.789 ;
+; IR[2]      ; ID[9]       ;       ; 2.756 ; 2.756 ;       ;
+; IR[2]      ; ID[10]      ; 2.764 ;       ;       ; 2.764 ;
+; IR[3]      ; ID[0]       ;       ; 2.959 ; 2.959 ;       ;
+; IR[3]      ; ID[1]       ;       ; 2.961 ; 2.961 ;       ;
+; IR[3]      ; ID[2]       ;       ; 2.963 ; 2.963 ;       ;
+; IR[3]      ; ID[3]       ;       ; 3.080 ; 3.080 ;       ;
+; IR[3]      ; ID[4]       ;       ; 3.073 ; 3.073 ;       ;
+; IR[3]      ; ID[5]       ;       ; 3.109 ; 3.109 ;       ;
+; IR[3]      ; ID[6]       ;       ; 3.104 ; 3.104 ;       ;
+; IR[3]      ; ID[7]       ; 3.075 ;       ;       ; 3.075 ;
+; IR[3]      ; ID[8]       ; 3.086 ;       ;       ; 3.086 ;
+; IR[3]      ; ID[9]       ; 3.061 ;       ;       ; 3.061 ;
+; IR[3]      ; ID[10]      ; 3.064 ;       ;       ; 3.064 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 44    ; 44   ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 44    ; 44   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 25 13:52:29 2020
+Info: Command: quartus_sta ID -c ID
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ID.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4538 megabytes
+    Info: Processing ended: Wed Nov 25 13:52:33 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TRISCALU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TRISCALU|ALU:inst|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

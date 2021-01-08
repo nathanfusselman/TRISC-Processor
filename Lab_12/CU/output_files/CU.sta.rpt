@@ -1,0 +1,1067 @@
+TimeQuest Timing Analyzer report for CU
+Wed Nov 25 17:26:15 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Setup: 'IR[0]'
+ 13. Slow Model Hold: 'IR[0]'
+ 14. Slow Model Hold: 'CLK'
+ 15. Slow Model Minimum Pulse Width: 'IR[0]'
+ 16. Slow Model Minimum Pulse Width: 'CLK'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLK'
+ 25. Fast Model Setup: 'IR[0]'
+ 26. Fast Model Hold: 'IR[0]'
+ 27. Fast Model Hold: 'CLK'
+ 28. Fast Model Minimum Pulse Width: 'IR[0]'
+ 29. Fast Model Minimum Pulse Width: 'CLK'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; CU                                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20AF484A7                                                     ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }   ;
+; IR[0]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IR[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -2.902 ; -32.998       ;
+; IR[0] ; -0.613 ; -0.613        ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; IR[0] ; -1.199 ; -14.522       ;
+; CLK   ; 2.560  ; 0.000         ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; IR[0] ; -1.631 ; -1.631                ;
+; CLK   ; -1.469 ; -33.241               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                 ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -2.902 ; FSM:inst1|nextstate.SUB4_851    ; FSM:inst1|state.SUB4   ; IR[0]        ; CLK         ; 0.500        ; -2.691     ; 0.750      ;
+; -2.352 ; FSM:inst1|nextstate.FETCH2_1245 ; FSM:inst1|state.FETCH2 ; IR[0]        ; CLK         ; 0.500        ; -2.791     ; 0.100      ;
+; -2.351 ; FSM:inst1|nextstate.LDA2_1161   ; FSM:inst1|state.LDA2   ; IR[0]        ; CLK         ; 0.500        ; -2.790     ; 0.100      ;
+; -2.252 ; FSM:inst1|nextstate.LDA3_1132   ; FSM:inst1|state.LDA3   ; IR[0]        ; CLK         ; 0.500        ; -2.691     ; 0.100      ;
+; -2.252 ; FSM:inst1|nextstate.ADD2_1022   ; FSM:inst1|state.ADD2   ; IR[0]        ; CLK         ; 0.500        ; -2.691     ; 0.100      ;
+; -2.251 ; FSM:inst1|nextstate.SUB2_909    ; FSM:inst1|state.SUB2   ; IR[0]        ; CLK         ; 0.500        ; -2.690     ; 0.100      ;
+; -2.250 ; FSM:inst1|nextstate.SUB3_880    ; FSM:inst1|state.SUB3   ; IR[0]        ; CLK         ; 0.500        ; -2.689     ; 0.100      ;
+; -2.250 ; FSM:inst1|nextstate.STA2_1077   ; FSM:inst1|state.STA2   ; IR[0]        ; CLK         ; 0.500        ; -2.689     ; 0.100      ;
+; -2.250 ; FSM:inst1|nextstate.DECODE_1216 ; FSM:inst1|state.DECODE ; IR[0]        ; CLK         ; 0.500        ; -2.689     ; 0.100      ;
+; -2.015 ; FSM:inst1|nextstate.XOR3_767    ; FSM:inst1|state.XOR3   ; IR[0]        ; CLK         ; 0.500        ; -2.454     ; 0.100      ;
+; -2.015 ; FSM:inst1|nextstate.XOR4_738    ; FSM:inst1|state.XOR4   ; IR[0]        ; CLK         ; 0.500        ; -2.454     ; 0.100      ;
+; -2.014 ; FSM:inst1|nextstate.ADD4_964    ; FSM:inst1|state.ADD4   ; IR[0]        ; CLK         ; 0.500        ; -2.453     ; 0.100      ;
+; -2.014 ; FSM:inst1|nextstate.FETCH1_1274 ; FSM:inst1|state.FETCH1 ; IR[0]        ; CLK         ; 0.500        ; -2.453     ; 0.100      ;
+; -2.013 ; FSM:inst1|nextstate.ADD3_993    ; FSM:inst1|state.ADD3   ; IR[0]        ; CLK         ; 0.500        ; -2.452     ; 0.100      ;
+; -1.817 ; FSM:inst1|nextstate.XOR2_796    ; FSM:inst1|state.XOR2   ; IR[0]        ; CLK         ; 0.500        ; -2.256     ; 0.100      ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'IR[0]'                                                                                                               ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.613 ; FSM:inst1|state.JPN1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.733      ;
+; -0.565 ; FSM:inst1|state.INC1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 2.336      ;
+; -0.532 ; FSM:inst1|state.CLR1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 2.303      ;
+; -0.272 ; FSM:inst1|state.LDA3   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.392      ;
+; -0.262 ; FSM:inst1|state.JMP1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.382      ;
+; -0.224 ; FSM:inst1|state.XOR4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 1.995      ;
+; -0.185 ; FSM:inst1|state.SUB4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.305      ;
+; -0.167 ; FSM:inst1|state.STA2   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.287      ;
+; -0.164 ; FSM:inst1|state.START  ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 1.935      ;
+; -0.066 ; FSM:inst1|state.JPZ1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.802      ; 2.186      ;
+; -0.062 ; FSM:inst1|state.ADD4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 1.833      ;
+; 0.234  ; FSM:inst1|state.XOR1   ; FSM:inst1|nextstate.XOR2_796    ; CLK          ; IR[0]       ; 0.500        ; 2.256      ; 1.252      ;
+; 0.377  ; FSM:inst1|state.SUB1   ; FSM:inst1|nextstate.SUB2_909    ; CLK          ; IR[0]       ; 0.500        ; 2.690      ; 1.248      ;
+; 0.407  ; FSM:inst1|state.ADD3   ; FSM:inst1|nextstate.ADD4_964    ; CLK          ; IR[0]       ; 0.500        ; 2.453      ; 0.844      ;
+; 0.638  ; FSM:inst1|state.XOR2   ; FSM:inst1|nextstate.XOR3_767    ; CLK          ; IR[0]       ; 0.500        ; 2.454      ; 0.849      ;
+; 0.679  ; FSM:inst1|state.FETCH1 ; FSM:inst1|nextstate.FETCH2_1245 ; CLK          ; IR[0]       ; 0.500        ; 2.442      ; 1.090      ;
+; 0.686  ; FSM:inst1|state.XOR3   ; FSM:inst1|nextstate.XOR4_738    ; CLK          ; IR[0]       ; 0.500        ; 2.454      ; 0.849      ;
+; 0.731  ; FSM:inst1|state.ADD2   ; FSM:inst1|nextstate.ADD3_993    ; CLK          ; IR[0]       ; 0.500        ; 2.801      ; 1.102      ;
+; 0.738  ; FSM:inst1|state.LDA1   ; FSM:inst1|nextstate.LDA2_1161   ; CLK          ; IR[0]       ; 0.500        ; 2.790      ; 1.132      ;
+; 0.864  ; FSM:inst1|state.SUB2   ; FSM:inst1|nextstate.SUB3_880    ; CLK          ; IR[0]       ; 0.500        ; 2.689      ; 1.000      ;
+; 0.895  ; FSM:inst1|state.SUB3   ; FSM:inst1|nextstate.SUB4_851    ; CLK          ; IR[0]       ; 0.500        ; 2.691      ; 1.213      ;
+; 0.918  ; FSM:inst1|state.FETCH2 ; FSM:inst1|nextstate.DECODE_1216 ; CLK          ; IR[0]       ; 0.500        ; 2.689      ; 1.239      ;
+; 0.920  ; FSM:inst1|state.ADD1   ; FSM:inst1|nextstate.ADD2_1022   ; CLK          ; IR[0]       ; 0.500        ; 2.691      ; 1.240      ;
+; 1.102  ; FSM:inst1|state.STA1   ; FSM:inst1|nextstate.STA2_1077   ; CLK          ; IR[0]       ; 0.500        ; 2.689      ; 1.010      ;
+; 1.104  ; FSM:inst1|state.LDA2   ; FSM:inst1|nextstate.LDA3_1132   ; CLK          ; IR[0]       ; 0.500        ; 2.691      ; 1.010      ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'IR[0]'                                                                                                                ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.199 ; FSM:inst1|state.ADD2   ; FSM:inst1|nextstate.ADD3_993    ; CLK          ; IR[0]       ; -0.500       ; 2.801      ; 1.102      ;
+; -1.189 ; FSM:inst1|state.SUB2   ; FSM:inst1|nextstate.SUB3_880    ; CLK          ; IR[0]       ; -0.500       ; 2.689      ; 1.000      ;
+; -1.181 ; FSM:inst1|state.LDA2   ; FSM:inst1|nextstate.LDA3_1132   ; CLK          ; IR[0]       ; -0.500       ; 2.691      ; 1.010      ;
+; -1.179 ; FSM:inst1|state.STA1   ; FSM:inst1|nextstate.STA2_1077   ; CLK          ; IR[0]       ; -0.500       ; 2.689      ; 1.010      ;
+; -1.158 ; FSM:inst1|state.LDA1   ; FSM:inst1|nextstate.LDA2_1161   ; CLK          ; IR[0]       ; -0.500       ; 2.790      ; 1.132      ;
+; -1.109 ; FSM:inst1|state.ADD3   ; FSM:inst1|nextstate.ADD4_964    ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 0.844      ;
+; -1.105 ; FSM:inst1|state.XOR2   ; FSM:inst1|nextstate.XOR3_767    ; CLK          ; IR[0]       ; -0.500       ; 2.454      ; 0.849      ;
+; -1.105 ; FSM:inst1|state.XOR3   ; FSM:inst1|nextstate.XOR4_738    ; CLK          ; IR[0]       ; -0.500       ; 2.454      ; 0.849      ;
+; -0.978 ; FSM:inst1|state.SUB3   ; FSM:inst1|nextstate.SUB4_851    ; CLK          ; IR[0]       ; -0.500       ; 2.691      ; 1.213      ;
+; -0.951 ; FSM:inst1|state.ADD1   ; FSM:inst1|nextstate.ADD2_1022   ; CLK          ; IR[0]       ; -0.500       ; 2.691      ; 1.240      ;
+; -0.950 ; FSM:inst1|state.FETCH2 ; FSM:inst1|nextstate.DECODE_1216 ; CLK          ; IR[0]       ; -0.500       ; 2.689      ; 1.239      ;
+; -0.942 ; FSM:inst1|state.SUB1   ; FSM:inst1|nextstate.SUB2_909    ; CLK          ; IR[0]       ; -0.500       ; 2.690      ; 1.248      ;
+; -0.852 ; FSM:inst1|state.FETCH1 ; FSM:inst1|nextstate.FETCH2_1245 ; CLK          ; IR[0]       ; -0.500       ; 2.442      ; 1.090      ;
+; -0.504 ; FSM:inst1|state.XOR1   ; FSM:inst1|nextstate.XOR2_796    ; CLK          ; IR[0]       ; -0.500       ; 2.256      ; 1.252      ;
+; -0.120 ; FSM:inst1|state.ADD4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 1.833      ;
+; -0.116 ; FSM:inst1|state.JPZ1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.186      ;
+; -0.018 ; FSM:inst1|state.START  ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 1.935      ;
+; -0.015 ; FSM:inst1|state.STA2   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.287      ;
+; 0.003  ; FSM:inst1|state.SUB4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.305      ;
+; 0.042  ; FSM:inst1|state.XOR4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 1.995      ;
+; 0.080  ; FSM:inst1|state.JMP1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.382      ;
+; 0.090  ; FSM:inst1|state.LDA3   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.392      ;
+; 0.350  ; FSM:inst1|state.CLR1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 2.303      ;
+; 0.383  ; FSM:inst1|state.INC1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.453      ; 2.336      ;
+; 0.431  ; FSM:inst1|state.JPN1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 2.802      ; 2.733      ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                 ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 2.560 ; FSM:inst1|nextstate.XOR2_796    ; FSM:inst1|state.XOR2   ; IR[0]        ; CLK         ; -0.500       ; -2.256     ; 0.100      ;
+; 2.756 ; FSM:inst1|nextstate.ADD3_993    ; FSM:inst1|state.ADD3   ; IR[0]        ; CLK         ; -0.500       ; -2.452     ; 0.100      ;
+; 2.757 ; FSM:inst1|nextstate.ADD4_964    ; FSM:inst1|state.ADD4   ; IR[0]        ; CLK         ; -0.500       ; -2.453     ; 0.100      ;
+; 2.757 ; FSM:inst1|nextstate.FETCH1_1274 ; FSM:inst1|state.FETCH1 ; IR[0]        ; CLK         ; -0.500       ; -2.453     ; 0.100      ;
+; 2.758 ; FSM:inst1|nextstate.XOR3_767    ; FSM:inst1|state.XOR3   ; IR[0]        ; CLK         ; -0.500       ; -2.454     ; 0.100      ;
+; 2.758 ; FSM:inst1|nextstate.XOR4_738    ; FSM:inst1|state.XOR4   ; IR[0]        ; CLK         ; -0.500       ; -2.454     ; 0.100      ;
+; 2.993 ; FSM:inst1|nextstate.SUB3_880    ; FSM:inst1|state.SUB3   ; IR[0]        ; CLK         ; -0.500       ; -2.689     ; 0.100      ;
+; 2.993 ; FSM:inst1|nextstate.STA2_1077   ; FSM:inst1|state.STA2   ; IR[0]        ; CLK         ; -0.500       ; -2.689     ; 0.100      ;
+; 2.993 ; FSM:inst1|nextstate.DECODE_1216 ; FSM:inst1|state.DECODE ; IR[0]        ; CLK         ; -0.500       ; -2.689     ; 0.100      ;
+; 2.994 ; FSM:inst1|nextstate.SUB2_909    ; FSM:inst1|state.SUB2   ; IR[0]        ; CLK         ; -0.500       ; -2.690     ; 0.100      ;
+; 2.995 ; FSM:inst1|nextstate.LDA3_1132   ; FSM:inst1|state.LDA3   ; IR[0]        ; CLK         ; -0.500       ; -2.691     ; 0.100      ;
+; 2.995 ; FSM:inst1|nextstate.ADD2_1022   ; FSM:inst1|state.ADD2   ; IR[0]        ; CLK         ; -0.500       ; -2.691     ; 0.100      ;
+; 3.094 ; FSM:inst1|nextstate.LDA2_1161   ; FSM:inst1|state.LDA2   ; IR[0]        ; CLK         ; -0.500       ; -2.790     ; 0.100      ;
+; 3.095 ; FSM:inst1|nextstate.FETCH2_1245 ; FSM:inst1|state.FETCH2 ; IR[0]        ; CLK         ; -0.500       ; -2.791     ; 0.100      ;
+; 3.645 ; FSM:inst1|nextstate.SUB4_851    ; FSM:inst1|state.SUB4   ; IR[0]        ; CLK         ; -0.500       ; -2.691     ; 0.750      ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'IR[0]'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; IR[0] ; Rise       ; IR[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD2_1022           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD2_1022           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD3_993            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD3_993            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD4_964            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD4_964            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.DECODE_1216         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.DECODE_1216         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH1_1274         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH1_1274         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH2_1245         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH2_1245         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA2_1161           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA2_1161           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA3_1132           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA3_1132           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.STA2_1077           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.STA2_1077           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB2_909            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB2_909            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB3_880            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB3_880            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB4_851            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB4_851            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR2_796            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR2_796            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR3_767            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR3_767            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR4_738            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR4_738            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; IR[0]|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; IR[0]|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD2_1022|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD2_1022|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD3_993|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD3_993|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD4_964|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD4_964|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.DECODE_1216|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.DECODE_1216|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.FETCH1_1274|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.FETCH1_1274|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.FETCH2_1245|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.FETCH2_1245|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.LDA2_1161|datac         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.LDA2_1161|datac         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.LDA3_1132|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.LDA3_1132|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.STA2_1077|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.STA2_1077|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB2_909|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB2_909|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB3_880|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB3_880|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB4_851|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB4_851|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR2_796|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR2_796|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR3_767|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR3_767|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR4_738|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR4_738|datac          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; CLK   ; Rise       ; CLK                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD2   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD2   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD3   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD3   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD4   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD4   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.CLR1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.CLR1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.DECODE ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.DECODE ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.FETCH1 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.FETCH1 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.FETCH2 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.FETCH2 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.INC1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.INC1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JMP1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JMP1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JPN1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JPN1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JPZ1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JPZ1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA2   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA2   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA3   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA3   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.STA1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.STA1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.STA2   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.STA2   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.START  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.START  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB2   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB2   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB3   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB3   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB4   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB4   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR1   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR1   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR2   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR2   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR3   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR3   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR4   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR4   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.CLR1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.CLR1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.DECODE|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.DECODE|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.FETCH1|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.FETCH1|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.FETCH2|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.FETCH2|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.INC1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.INC1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JMP1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JMP1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JPN1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JPN1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JPZ1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JPZ1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.STA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.STA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.STA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.STA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.START|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.START|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.XOR1|clk   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; C0        ; CLK        ; 7.036  ; 7.036  ; Fall       ; CLK             ;
+; C1        ; CLK        ; 6.359  ; 6.359  ; Fall       ; CLK             ;
+; C2        ; CLK        ; 6.680  ; 6.680  ; Fall       ; CLK             ;
+; C3        ; CLK        ; 10.738 ; 10.738 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 10.377 ; 10.377 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 7.861  ; 7.861  ; Fall       ; CLK             ;
+; C7        ; CLK        ; 6.680  ; 6.680  ; Fall       ; CLK             ;
+; C8        ; CLK        ; 7.046  ; 7.046  ; Fall       ; CLK             ;
+; C9        ; CLK        ; 7.089  ; 7.089  ; Fall       ; CLK             ;
+; C10       ; CLK        ; 8.134  ; 8.134  ; Fall       ; CLK             ;
+; C11       ; CLK        ; 7.742  ; 7.742  ; Fall       ; CLK             ;
+; C12       ; CLK        ; 8.366  ; 8.366  ; Fall       ; CLK             ;
+; C13       ; CLK        ; 9.459  ; 9.459  ; Fall       ; CLK             ;
+; C14       ; CLK        ; 7.795  ; 7.795  ; Fall       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C0        ; CLK        ; 7.036 ; 7.036 ; Fall       ; CLK             ;
+; C1        ; CLK        ; 6.359 ; 6.359 ; Fall       ; CLK             ;
+; C2        ; CLK        ; 6.680 ; 6.680 ; Fall       ; CLK             ;
+; C3        ; CLK        ; 8.101 ; 8.101 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 8.063 ; 8.063 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 7.188 ; 7.188 ; Fall       ; CLK             ;
+; C7        ; CLK        ; 6.680 ; 6.680 ; Fall       ; CLK             ;
+; C8        ; CLK        ; 7.046 ; 7.046 ; Fall       ; CLK             ;
+; C9        ; CLK        ; 7.089 ; 7.089 ; Fall       ; CLK             ;
+; C10       ; CLK        ; 7.406 ; 7.406 ; Fall       ; CLK             ;
+; C11       ; CLK        ; 7.532 ; 7.532 ; Fall       ; CLK             ;
+; C12       ; CLK        ; 7.934 ; 7.934 ; Fall       ; CLK             ;
+; C13       ; CLK        ; 7.654 ; 7.654 ; Fall       ; CLK             ;
+; C14       ; CLK        ; 7.468 ; 7.468 ; Fall       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.050 ; -11.787       ;
+; IR[0] ; 0.499  ; 0.000         ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; IR[0] ; -0.405 ; -4.924        ;
+; CLK   ; 1.531  ; 0.000         ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; IR[0] ; -1.380 ; -1.380                ;
+; CLK   ; -1.222 ; -27.222               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                 ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -1.050 ; FSM:inst1|nextstate.SUB4_851    ; FSM:inst1|state.SUB4   ; IR[0]        ; CLK         ; 0.500        ; -1.294     ; 0.286      ;
+; -0.825 ; FSM:inst1|nextstate.LDA2_1161   ; FSM:inst1|state.LDA2   ; IR[0]        ; CLK         ; 0.500        ; -1.315     ; 0.040      ;
+; -0.825 ; FSM:inst1|nextstate.FETCH2_1245 ; FSM:inst1|state.FETCH2 ; IR[0]        ; CLK         ; 0.500        ; -1.315     ; 0.040      ;
+; -0.804 ; FSM:inst1|nextstate.LDA3_1132   ; FSM:inst1|state.LDA3   ; IR[0]        ; CLK         ; 0.500        ; -1.294     ; 0.040      ;
+; -0.804 ; FSM:inst1|nextstate.ADD2_1022   ; FSM:inst1|state.ADD2   ; IR[0]        ; CLK         ; 0.500        ; -1.294     ; 0.040      ;
+; -0.803 ; FSM:inst1|nextstate.SUB2_909    ; FSM:inst1|state.SUB2   ; IR[0]        ; CLK         ; 0.500        ; -1.293     ; 0.040      ;
+; -0.802 ; FSM:inst1|nextstate.SUB3_880    ; FSM:inst1|state.SUB3   ; IR[0]        ; CLK         ; 0.500        ; -1.292     ; 0.040      ;
+; -0.802 ; FSM:inst1|nextstate.STA2_1077   ; FSM:inst1|state.STA2   ; IR[0]        ; CLK         ; 0.500        ; -1.292     ; 0.040      ;
+; -0.802 ; FSM:inst1|nextstate.DECODE_1216 ; FSM:inst1|state.DECODE ; IR[0]        ; CLK         ; 0.500        ; -1.292     ; 0.040      ;
+; -0.725 ; FSM:inst1|nextstate.XOR3_767    ; FSM:inst1|state.XOR3   ; IR[0]        ; CLK         ; 0.500        ; -1.215     ; 0.040      ;
+; -0.725 ; FSM:inst1|nextstate.XOR4_738    ; FSM:inst1|state.XOR4   ; IR[0]        ; CLK         ; 0.500        ; -1.215     ; 0.040      ;
+; -0.724 ; FSM:inst1|nextstate.ADD4_964    ; FSM:inst1|state.ADD4   ; IR[0]        ; CLK         ; 0.500        ; -1.214     ; 0.040      ;
+; -0.724 ; FSM:inst1|nextstate.FETCH1_1274 ; FSM:inst1|state.FETCH1 ; IR[0]        ; CLK         ; 0.500        ; -1.214     ; 0.040      ;
+; -0.723 ; FSM:inst1|nextstate.ADD3_993    ; FSM:inst1|state.ADD3   ; IR[0]        ; CLK         ; 0.500        ; -1.213     ; 0.040      ;
+; -0.649 ; FSM:inst1|nextstate.XOR2_796    ; FSM:inst1|state.XOR2   ; IR[0]        ; CLK         ; 0.500        ; -1.139     ; 0.040      ;
++--------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'IR[0]'                                                                                                              ;
++-------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; FSM:inst1|state.JPN1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.951      ;
+; 0.520 ; FSM:inst1|state.INC1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.821      ;
+; 0.524 ; FSM:inst1|state.CLR1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.817      ;
+; 0.563 ; FSM:inst1|state.LDA3   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.887      ;
+; 0.586 ; FSM:inst1|state.SUB4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.864      ;
+; 0.608 ; FSM:inst1|state.JMP1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.842      ;
+; 0.616 ; FSM:inst1|state.XOR4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.725      ;
+; 0.620 ; FSM:inst1|state.STA2   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.830      ;
+; 0.623 ; FSM:inst1|state.START  ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.718      ;
+; 0.637 ; FSM:inst1|state.JPZ1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.323      ; 0.813      ;
+; 0.665 ; FSM:inst1|state.ADD4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.676      ;
+; 0.763 ; FSM:inst1|state.XOR1   ; FSM:inst1|nextstate.XOR2_796    ; CLK          ; IR[0]       ; 0.500        ; 1.139      ; 0.467      ;
+; 0.828 ; FSM:inst1|state.SUB1   ; FSM:inst1|nextstate.SUB2_909    ; CLK          ; IR[0]       ; 0.500        ; 1.293      ; 0.471      ;
+; 0.835 ; FSM:inst1|state.ADD3   ; FSM:inst1|nextstate.ADD4_964    ; CLK          ; IR[0]       ; 0.500        ; 1.214      ; 0.336      ;
+; 0.913 ; FSM:inst1|state.XOR2   ; FSM:inst1|nextstate.XOR3_767    ; CLK          ; IR[0]       ; 0.500        ; 1.215      ; 0.338      ;
+; 0.920 ; FSM:inst1|state.FETCH1 ; FSM:inst1|nextstate.FETCH2_1245 ; CLK          ; IR[0]       ; 0.500        ; 1.206      ; 0.417      ;
+; 0.926 ; FSM:inst1|state.LDA1   ; FSM:inst1|nextstate.LDA2_1161   ; CLK          ; IR[0]       ; 0.500        ; 1.315      ; 0.438      ;
+; 0.927 ; FSM:inst1|state.XOR3   ; FSM:inst1|nextstate.XOR4_738    ; CLK          ; IR[0]       ; 0.500        ; 1.215      ; 0.337      ;
+; 0.933 ; FSM:inst1|state.ADD2   ; FSM:inst1|nextstate.ADD3_993    ; CLK          ; IR[0]       ; 0.500        ; 1.322      ; 0.424      ;
+; 0.985 ; FSM:inst1|state.SUB2   ; FSM:inst1|nextstate.SUB3_880    ; CLK          ; IR[0]       ; 0.500        ; 1.292      ; 0.387      ;
+; 0.997 ; FSM:inst1|state.SUB3   ; FSM:inst1|nextstate.SUB4_851    ; CLK          ; IR[0]       ; 0.500        ; 1.294      ; 0.457      ;
+; 0.998 ; FSM:inst1|state.FETCH2 ; FSM:inst1|nextstate.DECODE_1216 ; CLK          ; IR[0]       ; 0.500        ; 1.292      ; 0.468      ;
+; 1.002 ; FSM:inst1|state.ADD1   ; FSM:inst1|nextstate.ADD2_1022   ; CLK          ; IR[0]       ; 0.500        ; 1.294      ; 0.467      ;
+; 1.063 ; FSM:inst1|state.STA1   ; FSM:inst1|nextstate.STA2_1077   ; CLK          ; IR[0]       ; 0.500        ; 1.292      ; 0.392      ;
+; 1.066 ; FSM:inst1|state.LDA2   ; FSM:inst1|nextstate.LDA3_1132   ; CLK          ; IR[0]       ; 0.500        ; 1.294      ; 0.392      ;
++-------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'IR[0]'                                                                                                                ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.405 ; FSM:inst1|state.SUB2   ; FSM:inst1|nextstate.SUB3_880    ; CLK          ; IR[0]       ; -0.500       ; 1.292      ; 0.387      ;
+; -0.402 ; FSM:inst1|state.LDA2   ; FSM:inst1|nextstate.LDA3_1132   ; CLK          ; IR[0]       ; -0.500       ; 1.294      ; 0.392      ;
+; -0.400 ; FSM:inst1|state.STA1   ; FSM:inst1|nextstate.STA2_1077   ; CLK          ; IR[0]       ; -0.500       ; 1.292      ; 0.392      ;
+; -0.398 ; FSM:inst1|state.ADD2   ; FSM:inst1|nextstate.ADD3_993    ; CLK          ; IR[0]       ; -0.500       ; 1.322      ; 0.424      ;
+; -0.378 ; FSM:inst1|state.ADD3   ; FSM:inst1|nextstate.ADD4_964    ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.336      ;
+; -0.378 ; FSM:inst1|state.XOR3   ; FSM:inst1|nextstate.XOR4_738    ; CLK          ; IR[0]       ; -0.500       ; 1.215      ; 0.337      ;
+; -0.377 ; FSM:inst1|state.XOR2   ; FSM:inst1|nextstate.XOR3_767    ; CLK          ; IR[0]       ; -0.500       ; 1.215      ; 0.338      ;
+; -0.377 ; FSM:inst1|state.LDA1   ; FSM:inst1|nextstate.LDA2_1161   ; CLK          ; IR[0]       ; -0.500       ; 1.315      ; 0.438      ;
+; -0.337 ; FSM:inst1|state.SUB3   ; FSM:inst1|nextstate.SUB4_851    ; CLK          ; IR[0]       ; -0.500       ; 1.294      ; 0.457      ;
+; -0.327 ; FSM:inst1|state.ADD1   ; FSM:inst1|nextstate.ADD2_1022   ; CLK          ; IR[0]       ; -0.500       ; 1.294      ; 0.467      ;
+; -0.324 ; FSM:inst1|state.FETCH2 ; FSM:inst1|nextstate.DECODE_1216 ; CLK          ; IR[0]       ; -0.500       ; 1.292      ; 0.468      ;
+; -0.322 ; FSM:inst1|state.SUB1   ; FSM:inst1|nextstate.SUB2_909    ; CLK          ; IR[0]       ; -0.500       ; 1.293      ; 0.471      ;
+; -0.289 ; FSM:inst1|state.FETCH1 ; FSM:inst1|nextstate.FETCH2_1245 ; CLK          ; IR[0]       ; -0.500       ; 1.206      ; 0.417      ;
+; -0.172 ; FSM:inst1|state.XOR1   ; FSM:inst1|nextstate.XOR2_796    ; CLK          ; IR[0]       ; -0.500       ; 1.139      ; 0.467      ;
+; -0.038 ; FSM:inst1|state.ADD4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.676      ;
+; -0.010 ; FSM:inst1|state.JPZ1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.813      ;
+; 0.004  ; FSM:inst1|state.START  ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.718      ;
+; 0.007  ; FSM:inst1|state.STA2   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.830      ;
+; 0.011  ; FSM:inst1|state.XOR4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.725      ;
+; 0.019  ; FSM:inst1|state.JMP1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.842      ;
+; 0.041  ; FSM:inst1|state.SUB4   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.864      ;
+; 0.064  ; FSM:inst1|state.LDA3   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.887      ;
+; 0.103  ; FSM:inst1|state.CLR1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.817      ;
+; 0.107  ; FSM:inst1|state.INC1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.214      ; 0.821      ;
+; 0.128  ; FSM:inst1|state.JPN1   ; FSM:inst1|nextstate.FETCH1_1274 ; CLK          ; IR[0]       ; -0.500       ; 1.323      ; 0.951      ;
++--------+------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                 ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 1.531 ; FSM:inst1|nextstate.XOR2_796    ; FSM:inst1|state.XOR2   ; IR[0]        ; CLK         ; -0.500       ; -1.139     ; 0.040      ;
+; 1.605 ; FSM:inst1|nextstate.ADD3_993    ; FSM:inst1|state.ADD3   ; IR[0]        ; CLK         ; -0.500       ; -1.213     ; 0.040      ;
+; 1.606 ; FSM:inst1|nextstate.ADD4_964    ; FSM:inst1|state.ADD4   ; IR[0]        ; CLK         ; -0.500       ; -1.214     ; 0.040      ;
+; 1.606 ; FSM:inst1|nextstate.FETCH1_1274 ; FSM:inst1|state.FETCH1 ; IR[0]        ; CLK         ; -0.500       ; -1.214     ; 0.040      ;
+; 1.607 ; FSM:inst1|nextstate.XOR3_767    ; FSM:inst1|state.XOR3   ; IR[0]        ; CLK         ; -0.500       ; -1.215     ; 0.040      ;
+; 1.607 ; FSM:inst1|nextstate.XOR4_738    ; FSM:inst1|state.XOR4   ; IR[0]        ; CLK         ; -0.500       ; -1.215     ; 0.040      ;
+; 1.684 ; FSM:inst1|nextstate.SUB3_880    ; FSM:inst1|state.SUB3   ; IR[0]        ; CLK         ; -0.500       ; -1.292     ; 0.040      ;
+; 1.684 ; FSM:inst1|nextstate.STA2_1077   ; FSM:inst1|state.STA2   ; IR[0]        ; CLK         ; -0.500       ; -1.292     ; 0.040      ;
+; 1.684 ; FSM:inst1|nextstate.DECODE_1216 ; FSM:inst1|state.DECODE ; IR[0]        ; CLK         ; -0.500       ; -1.292     ; 0.040      ;
+; 1.685 ; FSM:inst1|nextstate.SUB2_909    ; FSM:inst1|state.SUB2   ; IR[0]        ; CLK         ; -0.500       ; -1.293     ; 0.040      ;
+; 1.686 ; FSM:inst1|nextstate.LDA3_1132   ; FSM:inst1|state.LDA3   ; IR[0]        ; CLK         ; -0.500       ; -1.294     ; 0.040      ;
+; 1.686 ; FSM:inst1|nextstate.ADD2_1022   ; FSM:inst1|state.ADD2   ; IR[0]        ; CLK         ; -0.500       ; -1.294     ; 0.040      ;
+; 1.707 ; FSM:inst1|nextstate.LDA2_1161   ; FSM:inst1|state.LDA2   ; IR[0]        ; CLK         ; -0.500       ; -1.315     ; 0.040      ;
+; 1.707 ; FSM:inst1|nextstate.FETCH2_1245 ; FSM:inst1|state.FETCH2 ; IR[0]        ; CLK         ; -0.500       ; -1.315     ; 0.040      ;
+; 1.932 ; FSM:inst1|nextstate.SUB4_851    ; FSM:inst1|state.SUB4   ; IR[0]        ; CLK         ; -0.500       ; -1.294     ; 0.286      ;
++-------+---------------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'IR[0]'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; IR[0] ; Rise       ; IR[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD2_1022           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD2_1022           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD3_993            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD3_993            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD4_964            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.ADD4_964            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.DECODE_1216         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.DECODE_1216         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH1_1274         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH1_1274         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH2_1245         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.FETCH2_1245         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA2_1161           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA2_1161           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA3_1132           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.LDA3_1132           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.STA2_1077           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.STA2_1077           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB2_909            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB2_909            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB3_880            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB3_880            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB4_851            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.SUB4_851            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR2_796            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR2_796            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR3_767            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR3_767            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR4_738            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; FSM:inst1|nextstate.XOR4_738            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; IR[0]|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; IR[0]|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD2_1022|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD2_1022|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD3_993|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD3_993|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.ADD4_964|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.ADD4_964|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.DECODE_1216|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.DECODE_1216|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.FETCH1_1274|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.FETCH1_1274|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.FETCH2_1245|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.FETCH2_1245|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.LDA2_1161|datac         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.LDA2_1161|datac         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.LDA3_1132|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.LDA3_1132|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.STA2_1077|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.STA2_1077|datad         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.START~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.START~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Rise       ; inst1|nextstate.START~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Rise       ; inst1|nextstate.START~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB2_909|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB2_909|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB3_880|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB3_880|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.SUB4_851|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.SUB4_851|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR2_796|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR2_796|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR3_767|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR3_767|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IR[0] ; Fall       ; inst1|nextstate.XOR4_738|datac          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IR[0] ; Fall       ; inst1|nextstate.XOR4_738|datac          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; CLK   ; Rise       ; CLK                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD3   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD3   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.ADD4   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.ADD4   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.CLR1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.CLR1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.DECODE ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.DECODE ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.FETCH1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.FETCH1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.FETCH2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.FETCH2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.INC1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.INC1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JMP1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JMP1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JPN1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JPN1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.JPZ1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.JPZ1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.LDA3   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.LDA3   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.STA1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.STA1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.STA2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.STA2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.START  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.START  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB3   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB3   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.SUB4   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.SUB4   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR3   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR3   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Fall       ; FSM:inst1|state.XOR4   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Fall       ; FSM:inst1|state.XOR4   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.ADD4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.ADD4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.CLR1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.CLR1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.DECODE|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.DECODE|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.FETCH1|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.FETCH1|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.FETCH2|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.FETCH2|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.INC1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.INC1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JMP1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JMP1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JPN1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JPN1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.JPZ1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.JPZ1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.LDA3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.LDA3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.STA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.STA1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.STA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.STA2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.START|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.START|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.SUB4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|state.SUB4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|state.XOR1|clk   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C0        ; CLK        ; 3.107 ; 3.107 ; Fall       ; CLK             ;
+; C1        ; CLK        ; 2.894 ; 2.894 ; Fall       ; CLK             ;
+; C2        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C3        ; CLK        ; 4.355 ; 4.355 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 4.226 ; 4.226 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 3.385 ; 3.385 ; Fall       ; CLK             ;
+; C7        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C8        ; CLK        ; 3.106 ; 3.106 ; Fall       ; CLK             ;
+; C9        ; CLK        ; 3.152 ; 3.152 ; Fall       ; CLK             ;
+; C10       ; CLK        ; 3.514 ; 3.514 ; Fall       ; CLK             ;
+; C11       ; CLK        ; 3.382 ; 3.382 ; Fall       ; CLK             ;
+; C12       ; CLK        ; 3.572 ; 3.572 ; Fall       ; CLK             ;
+; C13       ; CLK        ; 3.933 ; 3.933 ; Fall       ; CLK             ;
+; C14       ; CLK        ; 3.357 ; 3.357 ; Fall       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C0        ; CLK        ; 3.107 ; 3.107 ; Fall       ; CLK             ;
+; C1        ; CLK        ; 2.894 ; 2.894 ; Fall       ; CLK             ;
+; C2        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C3        ; CLK        ; 3.456 ; 3.456 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 3.466 ; 3.466 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 3.167 ; 3.167 ; Fall       ; CLK             ;
+; C7        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C8        ; CLK        ; 3.106 ; 3.106 ; Fall       ; CLK             ;
+; C9        ; CLK        ; 3.152 ; 3.152 ; Fall       ; CLK             ;
+; C10       ; CLK        ; 3.262 ; 3.262 ; Fall       ; CLK             ;
+; C11       ; CLK        ; 3.280 ; 3.280 ; Fall       ; CLK             ;
+; C12       ; CLK        ; 3.400 ; 3.400 ; Fall       ; CLK             ;
+; C13       ; CLK        ; 3.361 ; 3.361 ; Fall       ; CLK             ;
+; C14       ; CLK        ; 3.274 ; 3.274 ; Fall       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+---------+---------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+---------+----------+---------+---------------------+
+; Worst-case Slack ; -2.902  ; -1.199  ; N/A      ; N/A     ; -1.631              ;
+;  CLK             ; -2.902  ; 1.531   ; N/A      ; N/A     ; -1.469              ;
+;  IR[0]           ; -0.613  ; -1.199  ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -33.611 ; -14.522 ; 0.0      ; 0.0     ; -34.872             ;
+;  CLK             ; -32.998 ; 0.000   ; N/A      ; N/A     ; -33.241             ;
+;  IR[0]           ; -0.613  ; -14.522 ; N/A      ; N/A     ; -1.631              ;
++------------------+---------+---------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; C0        ; CLK        ; 7.036  ; 7.036  ; Fall       ; CLK             ;
+; C1        ; CLK        ; 6.359  ; 6.359  ; Fall       ; CLK             ;
+; C2        ; CLK        ; 6.680  ; 6.680  ; Fall       ; CLK             ;
+; C3        ; CLK        ; 10.738 ; 10.738 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 10.377 ; 10.377 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 7.861  ; 7.861  ; Fall       ; CLK             ;
+; C7        ; CLK        ; 6.680  ; 6.680  ; Fall       ; CLK             ;
+; C8        ; CLK        ; 7.046  ; 7.046  ; Fall       ; CLK             ;
+; C9        ; CLK        ; 7.089  ; 7.089  ; Fall       ; CLK             ;
+; C10       ; CLK        ; 8.134  ; 8.134  ; Fall       ; CLK             ;
+; C11       ; CLK        ; 7.742  ; 7.742  ; Fall       ; CLK             ;
+; C12       ; CLK        ; 8.366  ; 8.366  ; Fall       ; CLK             ;
+; C13       ; CLK        ; 9.459  ; 9.459  ; Fall       ; CLK             ;
+; C14       ; CLK        ; 7.795  ; 7.795  ; Fall       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; C0        ; CLK        ; 3.107 ; 3.107 ; Fall       ; CLK             ;
+; C1        ; CLK        ; 2.894 ; 2.894 ; Fall       ; CLK             ;
+; C2        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C3        ; CLK        ; 3.456 ; 3.456 ; Fall       ; CLK             ;
+; C4        ; CLK        ; 3.466 ; 3.466 ; Fall       ; CLK             ;
+; C5        ; CLK        ; 3.167 ; 3.167 ; Fall       ; CLK             ;
+; C7        ; CLK        ; 2.997 ; 2.997 ; Fall       ; CLK             ;
+; C8        ; CLK        ; 3.106 ; 3.106 ; Fall       ; CLK             ;
+; C9        ; CLK        ; 3.152 ; 3.152 ; Fall       ; CLK             ;
+; C10       ; CLK        ; 3.262 ; 3.262 ; Fall       ; CLK             ;
+; C11       ; CLK        ; 3.280 ; 3.280 ; Fall       ; CLK             ;
+; C12       ; CLK        ; 3.400 ; 3.400 ; Fall       ; CLK             ;
+; C13       ; CLK        ; 3.361 ; 3.361 ; Fall       ; CLK             ;
+; C14       ; CLK        ; 3.274 ; 3.274 ; Fall       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; IR[0]      ; CLK      ; 0        ; 0        ; 15       ; 0        ;
+; CLK        ; IR[0]    ; 0        ; 25       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; IR[0]      ; CLK      ; 0        ; 0        ; 15       ; 0        ;
+; CLK        ; IR[0]    ; 0        ; 25       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 59    ; 59   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 53    ; 53   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 25 17:26:12 2020
+Info: Command: quartus_sta CU -c CU
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 26 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'CU.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name IR[0] IR[0]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst1|nextstate.START~0  from: datac  to: combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.902
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.902       -32.998 CLK 
+    Info (332119):    -0.613        -0.613 IR[0] 
+Info (332146): Worst-case hold slack is -1.199
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.199       -14.522 IR[0] 
+    Info (332119):     2.560         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -1.631 IR[0] 
+    Info (332119):    -1.469       -33.241 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst1|nextstate.START~0  from: datac  to: combout
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.050
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.050       -11.787 CLK 
+    Info (332119):     0.499         0.000 IR[0] 
+Info (332146): Worst-case hold slack is -0.405
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.405        -4.924 IR[0] 
+    Info (332119):     1.531         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 IR[0] 
+    Info (332119):    -1.222       -27.222 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4537 megabytes
+    Info: Processing ended: Wed Nov 25 17:26:15 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

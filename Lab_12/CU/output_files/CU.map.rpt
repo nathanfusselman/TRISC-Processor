@@ -1,0 +1,557 @@
+Analysis & Synthesis report for CU
+Wed Nov 25 17:26:00 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |CU|FSM:inst1|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: FSM:inst1
+ 13. Parameter Settings for User Entity Instance: ID:inst
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 25 17:26:00 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; CU                                              ;
+; Top-level Entity Name              ; CU                                              ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 78                                              ;
+;     Total combinational functions  ; 78                                              ;
+;     Dedicated logic registers      ; 26                                              ;
+; Total registers                    ; 26                                              ;
+; Total pins                         ; 26                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20AF484A7      ;                    ;
+; Top-level entity name                                                      ; CU                 ; CU                 ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; ../ID/ID.v                       ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/ID/ID.v   ;         ;
+; ../FSM/FSM.v                     ; yes             ; User Verilog HDL File              ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/FSM/FSM.v ;         ;
+; CU.bdf                           ; yes             ; User Block Diagram/Schematic File  ; //vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/CU/CU.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 78    ;
+;                                             ;       ;
+; Total combinational functions               ; 78    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 20    ;
+;     -- 3 input functions                    ; 42    ;
+;     -- <=2 input functions                  ; 16    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 78    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 26    ;
+;     -- Dedicated logic registers            ; 26    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 26    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 26    ;
+; Total fan-out                               ; 329   ;
+; Average fan-out                             ; 2.53  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |CU                        ; 78 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |CU                 ; work         ;
+;    |FSM:inst1|             ; 68 (68)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CU|FSM:inst1       ; work         ;
+;    |ID:inst|               ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CU|ID:inst         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CU|FSM:inst1|state                                                                                                                                                                                                                                                                                                                                   ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+; Name         ; state.JPN1 ; state.JPZ1 ; state.JMP1 ; state.CLR1 ; state.INC1 ; state.XOR4 ; state.XOR3 ; state.XOR2 ; state.XOR1 ; state.SUB4 ; state.SUB3 ; state.SUB2 ; state.SUB1 ; state.ADD4 ; state.ADD3 ; state.ADD2 ; state.ADD1 ; state.STA2 ; state.STA1 ; state.LDA3 ; state.LDA2 ; state.LDA1 ; state.DECODE ; state.FETCH2 ; state.FETCH1 ; state.START ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+; state.START  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 0           ;
+; state.FETCH1 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 1            ; 1           ;
+; state.FETCH2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ; 0            ; 1           ;
+; state.DECODE ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1            ; 0            ; 0            ; 1           ;
+; state.LDA1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0            ; 0            ; 0            ; 1           ;
+; state.LDA2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.LDA3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.STA1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.STA2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.ADD4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.SUB4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR1   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR2   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR3   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.XOR4   ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.INC1   ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.CLR1   ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JMP1   ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JPZ1   ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
+; state.JPN1   ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0            ; 1           ;
++--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+--------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------+------------------------+
+; FSM:inst1|nextstate.ADD3_993                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.SUB3_880                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.XOR3_767                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.SUB1_935                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.SUB2_909                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.SUB4_851                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.XOR1_822                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.XOR2_796                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.XOR4_738                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.LDA3_1132                       ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.ADD4_964                        ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.INC1_709                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.CLR1_683                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.DECODE_1216                     ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.STA1_1103                       ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.STA2_1077                       ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.FETCH1_1274                     ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.FETCH2_1245                     ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.LDA1_1187                       ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.LDA2_1161                       ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.ADD1_1048                       ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.ADD2_1022                       ; FSM:inst1|nextstate.START ; yes                    ;
+; FSM:inst1|nextstate.JMP1_657                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.START_1300                      ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.JPZ1_631                        ; GND                       ; yes                    ;
+; FSM:inst1|nextstate.JPN1_605                        ; GND                       ; yes                    ;
+; Number of user-specified and inferred latches = 26  ;                           ;                        ;
++-----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; FSM:inst1|state~4                     ; Lost fanout        ;
+; FSM:inst1|state~5                     ; Lost fanout        ;
+; FSM:inst1|state~6                     ; Lost fanout        ;
+; FSM:inst1|state~7                     ; Lost fanout        ;
+; FSM:inst1|state~8                     ; Lost fanout        ;
+; FSM:inst1|state~9                     ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM:inst1 ;
++----------------+--------+------------------------------+
+; Parameter Name ; Value  ; Type                         ;
++----------------+--------+------------------------------+
+; START          ; 000000 ; Unsigned Binary              ;
+; FETCH1         ; 000001 ; Unsigned Binary              ;
+; FETCH2         ; 000010 ; Unsigned Binary              ;
+; DECODE         ; 000011 ; Unsigned Binary              ;
+; LDA1           ; 000100 ; Unsigned Binary              ;
+; LDA2           ; 000101 ; Unsigned Binary              ;
+; LDA3           ; 000110 ; Unsigned Binary              ;
+; STA1           ; 001000 ; Unsigned Binary              ;
+; STA2           ; 001001 ; Unsigned Binary              ;
+; ADD1           ; 001100 ; Unsigned Binary              ;
+; ADD2           ; 001101 ; Unsigned Binary              ;
+; ADD3           ; 001110 ; Unsigned Binary              ;
+; ADD4           ; 001111 ; Unsigned Binary              ;
+; SUB1           ; 010000 ; Unsigned Binary              ;
+; SUB2           ; 010001 ; Unsigned Binary              ;
+; SUB3           ; 010010 ; Unsigned Binary              ;
+; SUB4           ; 010011 ; Unsigned Binary              ;
+; XOR1           ; 010100 ; Unsigned Binary              ;
+; XOR2           ; 010101 ; Unsigned Binary              ;
+; XOR3           ; 010110 ; Unsigned Binary              ;
+; XOR4           ; 010111 ; Unsigned Binary              ;
+; INC1           ; 011000 ; Unsigned Binary              ;
+; CLR1           ; 011100 ; Unsigned Binary              ;
+; JMP1           ; 100000 ; Unsigned Binary              ;
+; JPZ1           ; 100100 ; Unsigned Binary              ;
+; JPN1           ; 101000 ; Unsigned Binary              ;
+; C0             ; 1      ; Signed Integer               ;
+; C1             ; 2      ; Signed Integer               ;
+; C2             ; 4      ; Signed Integer               ;
+; C3             ; 8      ; Signed Integer               ;
+; C4             ; 16     ; Signed Integer               ;
+; C5             ; 32     ; Signed Integer               ;
+; C6             ; 64     ; Signed Integer               ;
+; C7             ; 128    ; Signed Integer               ;
+; C8             ; 256    ; Signed Integer               ;
+; C9             ; 512    ; Signed Integer               ;
+; C10            ; 1024   ; Signed Integer               ;
+; C11            ; 2048   ; Signed Integer               ;
+; C12            ; 4096   ; Signed Integer               ;
+; C13            ; 8192   ; Signed Integer               ;
+; C14            ; 16384  ; Signed Integer               ;
+; C15            ; 32768  ; Signed Integer               ;
+; LDA            ; 1      ; Signed Integer               ;
+; STA            ; 2      ; Signed Integer               ;
+; ADD            ; 4      ; Signed Integer               ;
+; SUB            ; 8      ; Signed Integer               ;
+; XOR            ; 16     ; Signed Integer               ;
+; INC            ; 32     ; Signed Integer               ;
+; CLR            ; 64     ; Signed Integer               ;
+; JMP            ; 128    ; Signed Integer               ;
+; JPZ            ; 256    ; Signed Integer               ;
+; JPN            ; 512    ; Signed Integer               ;
+; HLT            ; 1024   ; Signed Integer               ;
++----------------+--------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ID:inst ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; LDA            ; 0000  ; Unsigned Binary             ;
+; STA            ; 0001  ; Unsigned Binary             ;
+; ADD            ; 0010  ; Unsigned Binary             ;
+; SUB            ; 0011  ; Unsigned Binary             ;
+; XOR            ; 0100  ; Unsigned Binary             ;
+; INC            ; 0110  ; Unsigned Binary             ;
+; CLR            ; 0111  ; Unsigned Binary             ;
+; JMP            ; 1000  ; Unsigned Binary             ;
+; JPZ            ; 1100  ; Unsigned Binary             ;
+; JPN            ; 1001  ; Unsigned Binary             ;
+; HLT            ; 1111  ; Unsigned Binary             ;
+; _LDA           ; 1     ; Signed Integer              ;
+; _STA           ; 2     ; Signed Integer              ;
+; _ADD           ; 4     ; Signed Integer              ;
+; _SUB           ; 8     ; Signed Integer              ;
+; _XOR           ; 16    ; Signed Integer              ;
+; _INC           ; 32    ; Signed Integer              ;
+; _CLR           ; 64    ; Signed Integer              ;
+; _JMP           ; 128   ; Signed Integer              ;
+; _JPZ           ; 256   ; Signed Integer              ;
+; _JPN           ; 512   ; Signed Integer              ;
+; _HLT           ; 1024  ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 25 17:25:55 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CU -c CU
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_12/id/id.v
+    Info (12023): Found entity 1: ID
+Info (12021): Found 1 design units, including 1 entities, in source file //vmware-host/shared folders/documents/school/fall_2020/cse_2441-ta/labs/lab_12/fsm/fsm.v
+    Info (12023): Found entity 1: FSM
+Info (12021): Found 1 design units, including 1 entities, in source file cu.bdf
+    Info (12023): Found entity 1: CU
+Info (12127): Elaborating entity "CU" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "C"
+Warning (275080): Converted elements in bus name "C" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C[15..0]" to "C15..0"
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:inst1"
+Warning (10230): Verilog HDL assignment warning at FSM.v(29): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(31): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(32): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(34): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(35): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(36): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(37): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(38): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(39): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(40): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(41): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(42): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(43): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(44): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(45): variable "ID" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at FSM.v(48): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(49): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(50): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(52): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(53): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(55): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(56): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(57): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(58): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(60): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(61): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(63): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(65): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(66): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(67): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(68): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(70): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(72): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FSM.v(74): truncated value with size 32 to match size of target (16)
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(26): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "nextstate.JPN1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.JPZ1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.JMP1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.CLR1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.INC1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.XOR1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.SUB1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD4" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.ADD1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.STA2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.STA1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA3" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.LDA1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.DECODE" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.FETCH2" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.FETCH1" at FSM.v(26)
+Info (10041): Inferred latch for "nextstate.START" at FSM.v(26)
+Info (12128): Elaborating entity "ID" for hierarchy "ID:inst"
+Warning (10230): Verilog HDL assignment warning at ID.v(11): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(12): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(13): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(14): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(15): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(16): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(17): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(18): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(19): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(20): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at ID.v(21): truncated value with size 32 to match size of target (11)
+Warning (12069): Ignored assignment(s) for "C[0]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[1]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[2]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[3]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[4]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[5]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[6]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[7]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[8]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[9]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[10]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[11]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[12]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[13]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[14]" because "C" is not a bus or array
+Warning (12069): Ignored assignment(s) for "C[15]" because "C" is not a bus or array
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "C15" is stuck at GND
+    Warning (13410): Pin "C6" is stuck at GND
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/CU/output_files/CU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Z"
+    Warning (15610): No output dependent on input pin "N"
+    Warning (15610): No output dependent on input pin "V"
+    Warning (15610): No output dependent on input pin "C"
+Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 103 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 4601 megabytes
+    Info: Processing ended: Wed Nov 25 17:26:00 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_12/CU/output_files/CU.map.smsg.
+
+

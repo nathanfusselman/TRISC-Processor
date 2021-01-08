@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="RAM_Tester">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM_Tester|Lab11RAM:inst8|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_fph1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,22 @@
+Quartus II Archive log --	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3_tmp_archive.qarlog
+
+Archive:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3_tmp_archive.qar
+Date:		Fri Oct 16 09:17:15 2020
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3.qpf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3.qsf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3.v
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/incremental_db/compiled_partitions/Lab_6_Section_3.db_info
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Oct 16 09:17:16 2020
+Source archive file:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_6/Section_3/Lab_6_Section_3_tmp_archive.qar
+Archive was extracted into	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_7/_7_Segment_Decoder/
+		 - successfully.

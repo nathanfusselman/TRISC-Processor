@@ -1,0 +1,21 @@
+|Lab_6_Section_3
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a0 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+b0 <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+c0 <= c0.DB_MAX_OUTPUT_PORT_TYPE
+d0 <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e0 <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f0 <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g0 <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+a1 <= <VCC>
+b1 <= <VCC>
+c1 <= <VCC>
+d1 <= <VCC>
+e1 <= <VCC>
+f1 <= <VCC>
+g1 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,92 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 160 224)
+	(text "TRISCFLAG" (rect 5 0 72 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "Z_I" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "Z_I" (rect 21 35 38 49)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "N_I" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "N_I" (rect 21 59 38 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "V_I" (rect 0 0 18 14)(font "Arial" (font_size 8)))
+		(text "V_I" (rect 21 83 39 97)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "C_I" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "C_I" (rect 21 107 38 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 48 160)
+		(input)
+		(text "C[15]" (rect 0 32 29 46)(font "Arial" (font_size 8)))
+		(text "C[15]" (rect 40 105 54 134)(font "Arial" (font_size 8))(vertical))
+		(line (pt 48 160)(pt 48 143))
+	)
+	(port
+		(pt 96 40)
+		(output)
+		(text "Z" (rect 0 0 8 14)(font "Arial" (font_size 8)))
+		(text "Z" (rect 67 35 75 49)(font "Arial" (font_size 8)))
+		(line (pt 96 40)(pt 80 40))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "N" (rect 0 0 8 14)(font "Arial" (font_size 8)))
+		(text "N" (rect 67 59 75 73)(font "Arial" (font_size 8)))
+		(line (pt 96 64)(pt 80 64))
+	)
+	(port
+		(pt 96 88)
+		(output)
+		(text "V" (rect 0 0 9 14)(font "Arial" (font_size 8)))
+		(text "V" (rect 66 83 75 97)(font "Arial" (font_size 8)))
+		(line (pt 96 88)(pt 80 88))
+	)
+	(port
+		(pt 96 112)
+		(output)
+		(text "C" (rect 0 0 8 14)(font "Arial" (font_size 8)))
+		(text "C" (rect 67 107 75 121)(font "Arial" (font_size 8)))
+		(line (pt 96 112)(pt 80 112))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 144))
+	)
+)

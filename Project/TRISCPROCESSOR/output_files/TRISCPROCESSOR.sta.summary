@@ -1,0 +1,301 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -8.145
+TNS   : -36.302
+
+Type  : Slow Model Setup 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -6.515
+TNS   : -20.188
+
+Type  : Slow Model Setup 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : -6.459
+TNS   : -41.160
+
+Type  : Slow Model Setup 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -6.345
+TNS   : -41.833
+
+Type  : Slow Model Setup 'ACC:inst3|74193:inst|26~1'
+Slack : -5.898
+TNS   : -13.934
+
+Type  : Slow Model Setup 'ACC:inst3|74193:inst|25~1'
+Slack : -5.600
+TNS   : -9.040
+
+Type  : Slow Model Setup 'ACC:inst3|74193:inst|24~1'
+Slack : -5.459
+TNS   : -5.459
+
+Type  : Slow Model Setup 'CLK'
+Slack : -4.356
+TNS   : -88.051
+
+Type  : Slow Model Setup 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : -2.624
+TNS   : -11.734
+
+Type  : Slow Model Hold 'ACC:inst3|74193:inst|25~1'
+Slack : -3.406
+TNS   : -3.406
+
+Type  : Slow Model Hold 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : -2.977
+TNS   : -3.062
+
+Type  : Slow Model Hold 'ACC:inst3|74193:inst|26~1'
+Slack : -2.879
+TNS   : -5.096
+
+Type  : Slow Model Hold 'CLK'
+Slack : -2.728
+TNS   : -15.151
+
+Type  : Slow Model Hold 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -2.689
+TNS   : -4.932
+
+Type  : Slow Model Hold 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : -2.686
+TNS   : -6.576
+
+Type  : Slow Model Hold 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -1.315
+TNS   : -1.315
+
+Type  : Slow Model Hold 'ACC:inst3|74193:inst|24~1'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : 1.279
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -7.058
+TNS   : -21.872
+
+Type  : Slow Model Recovery 'ACC:inst3|74193:inst|26~1'
+Slack : -6.441
+TNS   : -15.065
+
+Type  : Slow Model Recovery 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -6.438
+TNS   : -19.553
+
+Type  : Slow Model Recovery 'ACC:inst3|74193:inst|25~1'
+Slack : -6.143
+TNS   : -9.885
+
+Type  : Slow Model Recovery 'ACC:inst3|74193:inst|24~1'
+Slack : -6.002
+TNS   : -6.002
+
+Type  : Slow Model Removal 'ACC:inst3|74193:inst|25~1'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : 0.514
+TNS   : 0.000
+
+Type  : Slow Model Removal 'ACC:inst3|74193:inst|26~1'
+Slack : 0.691
+TNS   : 0.000
+
+Type  : Slow Model Removal 'ACC:inst3|74193:inst|24~1'
+Slack : 0.804
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : 1.833
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK'
+Slack : -2.064
+TNS   : -173.593
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -0.611
+TNS   : -9.776
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -0.611
+TNS   : -6.110
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -0.611
+TNS   : -4.888
+
+Type  : Slow Model Minimum Pulse Width 'ACC:inst3|74193:inst|26~1'
+Slack : -0.611
+TNS   : -3.666
+
+Type  : Slow Model Minimum Pulse Width 'ACC:inst3|74193:inst|25~1'
+Slack : -0.611
+TNS   : -2.444
+
+Type  : Slow Model Minimum Pulse Width 'ACC:inst3|74193:inst|24~1'
+Slack : -0.611
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'ACC:inst3|74193:inst|26~1'
+Slack : -2.428
+TNS   : -5.068
+
+Type  : Fast Model Setup 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -2.423
+TNS   : -10.460
+
+Type  : Fast Model Setup 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -2.316
+TNS   : -5.811
+
+Type  : Fast Model Setup 'ACC:inst3|74193:inst|25~1'
+Slack : -2.313
+TNS   : -3.401
+
+Type  : Fast Model Setup 'ACC:inst3|74193:inst|24~1'
+Slack : -2.292
+TNS   : -2.292
+
+Type  : Fast Model Setup 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -2.287
+TNS   : -13.705
+
+Type  : Fast Model Setup 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : -2.218
+TNS   : -11.426
+
+Type  : Fast Model Setup 'CLK'
+Slack : -1.344
+TNS   : -25.987
+
+Type  : Fast Model Setup 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : -0.274
+TNS   : -0.434
+
+Type  : Fast Model Hold 'CLK'
+Slack : -1.621
+TNS   : -11.941
+
+Type  : Fast Model Hold 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : -1.548
+TNS   : -1.548
+
+Type  : Fast Model Hold 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : -1.483
+TNS   : -2.868
+
+Type  : Fast Model Hold 'ACC:inst3|74193:inst|25~1'
+Slack : -1.333
+TNS   : -1.333
+
+Type  : Fast Model Hold 'ACC:inst3|74193:inst|26~1'
+Slack : -1.130
+TNS   : -2.012
+
+Type  : Fast Model Hold 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -1.097
+TNS   : -1.726
+
+Type  : Fast Model Hold 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -1.067
+TNS   : -2.123
+
+Type  : Fast Model Hold 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast Model Hold 'ACC:inst3|74193:inst|24~1'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'ACC:inst3|74193:inst|26~1'
+Slack : -2.743
+TNS   : -5.859
+
+Type  : Fast Model Recovery 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -2.631
+TNS   : -6.925
+
+Type  : Fast Model Recovery 'ACC:inst3|74193:inst|25~1'
+Slack : -2.628
+TNS   : -3.953
+
+Type  : Fast Model Recovery 'ACC:inst3|74193:inst|24~1'
+Slack : -2.607
+TNS   : -2.607
+
+Type  : Fast Model Recovery 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -2.424
+TNS   : -6.151
+
+Type  : Fast Model Removal 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast Model Removal 'ACC:inst3|74193:inst|25~1'
+Slack : 0.541
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Fast Model Removal 'ACC:inst3|74193:inst|24~1'
+Slack : 0.614
+TNS   : 0.000
+
+Type  : Fast Model Removal 'ACC:inst3|74193:inst|26~1'
+Slack : 0.725
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK'
+Slack : -2.000
+TNS   : -163.222
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[7]'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[15]'
+Slack : -0.500
+TNS   : -5.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst7|FSM:inst1|CONTROL[9]'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'ACC:inst3|74193:inst|26~1'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Minimum Pulse Width 'ACC:inst3|74193:inst|25~1'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Minimum Pulse Width 'ACC:inst3|74193:inst|24~1'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst7|FSM:inst1|state.DECODE'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst7|FSM:inst1|state.JPN1'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,26 @@
+Quartus II Archive log --	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3_tmp_archive.qarlog
+
+Archive:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3_tmp_archive.qar
+Date:		Fri Sep 18 19:11:45 2020
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/ICs/7400/7400.bdf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/ICs/7486/7486.bdf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3.bdf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3.qpf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3.qsf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Waveform.vwf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/db/Circuit_3.sim.vwf
+//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/incremental_db/compiled_partitions/Circuit_3.db_info
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Sep 18 19:11:47 2020
+Source archive file:	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3/Circuit_3_tmp_archive.qar
+Archive was extracted into	//vmware-host/Shared Folders/Documents/School/Fall_2020/CSE_2441-TA/Labs/Lab_3/Circuit_3_Min/
+		 - successfully.

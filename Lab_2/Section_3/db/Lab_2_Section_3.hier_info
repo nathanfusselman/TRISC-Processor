@@ -1,0 +1,73 @@
+|Lab_2_Section_3
+C4 <= Lab_2_Section_2:inst3.Q
+A3 => Lab_2_Section_2:inst3.A
+B3 => Lab_2_Section_2:inst3.B
+A2 => Lab_2_Section_2:inst2.A
+B2 => Lab_2_Section_2:inst2.B
+A1 => Lab_2_Section_2:inst1.A
+B1 => Lab_2_Section_2:inst1.B
+A0 => Lab_2_Section_2:inst.A
+B0 => Lab_2_Section_2:inst.B
+C0 => Lab_2_Section_2:inst.C
+S0 <= Lab_2_Section_2:inst.P
+S1 <= Lab_2_Section_2:inst1.P
+S2 <= Lab_2_Section_2:inst2.P
+S3 <= Lab_2_Section_2:inst3.P
+
+
+|Lab_2_Section_3|Lab_2_Section_2:inst3
+P <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst5.IN1
+C => inst3.IN1
+C => inst4.IN1
+Q <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_2_Section_3|Lab_2_Section_2:inst2
+P <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst5.IN1
+C => inst3.IN1
+C => inst4.IN1
+Q <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_2_Section_3|Lab_2_Section_2:inst1
+P <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst5.IN1
+C => inst3.IN1
+C => inst4.IN1
+Q <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_2_Section_3|Lab_2_Section_2:inst
+P <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst5.IN1
+C => inst3.IN1
+C => inst4.IN1
+Q <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
