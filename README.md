@@ -107,10 +107,6 @@ This project was split into 2 parts which really helped to easily integrate thin
 
 For testing the design, I found it easiest to just use the DE1, as I found it difficult to create multiple timing diagrams and I prefer to see the large number of outputs on the HEX displays ratter then as binary outputs in the timing diagrams. I did find the Controller to be easier to design without the DE1 and for that part I did opt into using the timing diagrams to verify the design of the Controller.
 
-### 5.3 Simulation Results from Quartus II
-
-### 5.4 Test Results from DE1 Implementation
-
 ## 6 Conclusion
 
 ### 6.1 Resolution of design
